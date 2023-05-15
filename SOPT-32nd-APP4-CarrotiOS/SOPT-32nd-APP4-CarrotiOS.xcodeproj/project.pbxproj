@@ -38,6 +38,7 @@
 		DF18422E2A1204D5001A466A /* AppleSDGothicNeoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF18422D2A1204D5001A466A /* AppleSDGothicNeoB.ttf */; };
 		DF1842302A120B55001A466A /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18422F2A120B55001A466A /* Int+.swift */; };
 		DF1842322A120BCD001A466A /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842312A120BCD001A466A /* UIView+.swift */; };
+		DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842332A120CB0001A466A /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		DF18422D2A1204D5001A466A /* AppleSDGothicNeoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoB.ttf; sourceTree = "<group>"; };
 		DF18422F2A120B55001A466A /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		DF1842312A120BCD001A466A /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		DF1842332A120CB0001A466A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				DF1841FB2A11C416001A466A /* d.swift */,
+				DF1842332A120CB0001A466A /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */,
 				DF1841C92A11BD1A001A466A /* AppDelegate.swift in Sources */,
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
+				DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */,
 				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
 				DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */,
