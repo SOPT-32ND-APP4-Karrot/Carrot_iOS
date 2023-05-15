@@ -12,6 +12,21 @@
 		DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841CC2A11BD1A001A466A /* ViewController.swift */; };
 		DF1841D22A11BD1C001A466A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF1841D12A11BD1C001A466A /* Assets.xcassets */; };
 		DF1841D52A11BD1C001A466A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1841D32A11BD1C001A466A /* LaunchScreen.storyboard */; };
+		DF1841F62A11C3FA001A466A /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841F52A11C3FA001A466A /* a.swift */; };
+		DF1841F82A11C405001A466A /* b.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841F72A11C405001A466A /* b.swift */; };
+		DF1841FA2A11C40D001A466A /* c.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841F92A11C40D001A466A /* c.swift */; };
+		DF1841FC2A11C416001A466A /* d.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841FB2A11C416001A466A /* d.swift */; };
+		DF1841FE2A11C426001A466A /* e.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841FD2A11C426001A466A /* e.swift */; };
+		DF1842002A11C42C001A466A /* f.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841FF2A11C42C001A466A /* f.swift */; };
+		DF1842022A11C433001A466A /* g.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842012A11C433001A466A /* g.swift */; };
+		DF1842042A11C43A001A466A /* h.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842032A11C43A001A466A /* h.swift */; };
+		DF1842062A11C445001A466A /* i.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842052A11C445001A466A /* i.swift */; };
+		DF1842082A11C44A001A466A /* j.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842072A11C44A001A466A /* j.swift */; };
+		DF18420A2A11C451001A466A /* k.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842092A11C451001A466A /* k.swift */; };
+		DF18420C2A11C457001A466A /* l.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420B2A11C457001A466A /* l.swift */; };
+		DF18420E2A11C45D001A466A /* m.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420D2A11C45D001A466A /* m.swift */; };
+		DF1842102A11C463001A466A /* n.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420F2A11C463001A466A /* n.swift */; };
+		DF1842122A11C46D001A466A /* o.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842112A11C46D001A466A /* o.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +37,21 @@
 		DF1841D12A11BD1C001A466A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF1841D42A11BD1C001A466A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF1841D62A11BD1C001A466A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF1841F52A11C3FA001A466A /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
+		DF1841F72A11C405001A466A /* b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b.swift; sourceTree = "<group>"; };
+		DF1841F92A11C40D001A466A /* c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = c.swift; sourceTree = "<group>"; };
+		DF1841FB2A11C416001A466A /* d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = d.swift; sourceTree = "<group>"; };
+		DF1841FD2A11C426001A466A /* e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e.swift; sourceTree = "<group>"; };
+		DF1841FF2A11C42C001A466A /* f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = f.swift; sourceTree = "<group>"; };
+		DF1842012A11C433001A466A /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
+		DF1842032A11C43A001A466A /* h.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h.swift; sourceTree = "<group>"; };
+		DF1842052A11C445001A466A /* i.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i.swift; sourceTree = "<group>"; };
+		DF1842072A11C44A001A466A /* j.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = j.swift; sourceTree = "<group>"; };
+		DF1842092A11C451001A466A /* k.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = k.swift; sourceTree = "<group>"; };
+		DF18420B2A11C457001A466A /* l.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = l.swift; sourceTree = "<group>"; };
+		DF18420D2A11C45D001A466A /* m.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m.swift; sourceTree = "<group>"; };
+		DF18420F2A11C463001A466A /* n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n.swift; sourceTree = "<group>"; };
+		DF1842112A11C46D001A466A /* o.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = o.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +84,213 @@
 		DF1841C72A11BD1A001A466A /* SOPT-32nd-APP4-CarrotiOS */ = {
 			isa = PBXGroup;
 			children = (
-				DF1841C82A11BD1A001A466A /* AppDelegate.swift */,
-				DF1841CA2A11BD1A001A466A /* SceneDelegate.swift */,
-				DF1841CC2A11BD1A001A466A /* ViewController.swift */,
-				DF1841D12A11BD1C001A466A /* Assets.xcassets */,
-				DF1841D32A11BD1C001A466A /* LaunchScreen.storyboard */,
-				DF1841D62A11BD1C001A466A /* Info.plist */,
+				DF1841DC2A11C1D2001A466A /* Storyboard */,
+				DF1841DD2A11C1DF001A466A /* Application */,
+				DF1841DE2A11C1F8001A466A /* Resource */,
+				DF1841DF2A11C202001A466A /* Common */,
+				DF1841E02A11C209001A466A /* Presentation */,
+				DF1841E12A11C210001A466A /* Network */,
+				DF1841E22A11C217001A466A /* Data */,
 			);
 			path = "SOPT-32nd-APP4-CarrotiOS";
+			sourceTree = "<group>";
+		};
+		DF1841DC2A11C1D2001A466A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841D32A11BD1C001A466A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DF1841DD2A11C1DF001A466A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841C82A11BD1A001A466A /* AppDelegate.swift */,
+				DF1841CA2A11BD1A001A466A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DF1841DE2A11C1F8001A466A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841E32A11C262001A466A /* Fonts */,
+				DF1841D12A11BD1C001A466A /* Assets.xcassets */,
+				DF1841D62A11BD1C001A466A /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DF1841DF2A11C202001A466A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841E42A11C27E001A466A /* Consts */,
+				DF1841E52A11C285001A466A /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DF1841E02A11C209001A466A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841EB2A11C2A9001A466A /* Base */,
+				DF1841EA2A11C2A3001A466A /* Home */,
+				DF1841E82A11C299001A466A /* Sale */,
+				DF1841E72A11C294001A466A /* Chat */,
+				DF1841E62A11C28F001A466A /* Review */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DF1841E12A11C210001A466A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841EF2A11C2BC001A466A /* Home */,
+				DF1841EE2A11C2B8001A466A /* Sale */,
+				DF1841ED2A11C2B3001A466A /* Chat */,
+				DF1841EC2A11C2AD001A466A /* Review */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DF1841E22A11C217001A466A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841F42A11C2D9001A466A /* Home */,
+				DF1841F32A11C2D5001A466A /* Sale */,
+				DF1841F22A11C2D1001A466A /* Chat */,
+				DF1841F12A11C2CD001A466A /* Review */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DF1841E32A11C262001A466A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841F52A11C3FA001A466A /* a.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DF1841E42A11C27E001A466A /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841F72A11C405001A466A /* b.swift */,
+			);
+			path = Consts;
+			sourceTree = "<group>";
+		};
+		DF1841E52A11C285001A466A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841F92A11C40D001A466A /* c.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF1841E62A11C28F001A466A /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				DF1842012A11C433001A466A /* g.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		DF1841E72A11C294001A466A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841FF2A11C42C001A466A /* f.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		DF1841E82A11C299001A466A /* Sale */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841FD2A11C426001A466A /* e.swift */,
+			);
+			path = Sale;
+			sourceTree = "<group>";
+		};
+		DF1841EA2A11C2A3001A466A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841CC2A11BD1A001A466A /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DF1841EB2A11C2A9001A466A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DF1841FB2A11C416001A466A /* d.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DF1841EC2A11C2AD001A466A /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				DF1842092A11C451001A466A /* k.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		DF1841ED2A11C2B3001A466A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DF1842072A11C44A001A466A /* j.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		DF1841EE2A11C2B8001A466A /* Sale */ = {
+			isa = PBXGroup;
+			children = (
+				DF1842052A11C445001A466A /* i.swift */,
+			);
+			path = Sale;
+			sourceTree = "<group>";
+		};
+		DF1841EF2A11C2BC001A466A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DF1842032A11C43A001A466A /* h.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DF1841F12A11C2CD001A466A /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				DF1842112A11C46D001A466A /* o.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		DF1841F22A11C2D1001A466A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DF18420F2A11C463001A466A /* n.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		DF1841F32A11C2D5001A466A /* Sale */ = {
+			isa = PBXGroup;
+			children = (
+				DF18420D2A11C45D001A466A /* m.swift */,
+			);
+			path = Sale;
+			sourceTree = "<group>";
+		};
+		DF1841F42A11C2D9001A466A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DF18420B2A11C457001A466A /* l.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +363,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1842082A11C44A001A466A /* j.swift in Sources */,
+				DF1842002A11C42C001A466A /* f.swift in Sources */,
 				DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */,
 				DF1841C92A11BD1A001A466A /* AppDelegate.swift in Sources */,
+				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
+				DF1841FA2A11C40D001A466A /* c.swift in Sources */,
+				DF1841F62A11C3FA001A466A /* a.swift in Sources */,
+				DF1841F82A11C405001A466A /* b.swift in Sources */,
+				DF1842122A11C46D001A466A /* o.swift in Sources */,
+				DF18420C2A11C457001A466A /* l.swift in Sources */,
+				DF1841FC2A11C416001A466A /* d.swift in Sources */,
+				DF1841FE2A11C426001A466A /* e.swift in Sources */,
+				DF1842022A11C433001A466A /* g.swift in Sources */,
+				DF1842042A11C43A001A466A /* h.swift in Sources */,
+				DF1842102A11C463001A466A /* n.swift in Sources */,
+				DF18420A2A11C451001A466A /* k.swift in Sources */,
+				DF18420E2A11C45D001A466A /* m.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
