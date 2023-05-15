@@ -61,10 +61,10 @@ public enum Image {
     
     // MARK: - temparature
     
-    public static let temparatureIcon1 = UIImage(named: "temparature1") // 0 ~ 15
-    public static let temparatureIcon2 = UIImage(named: "temparature2") // 16 ~ 25
-    public static let temparatureIcon3 = UIImage(named: "temparature3") // 26 ~ 37.5
-    public static let temparatureIcon4 = UIImage(named: "temparature4") // 37.6 ~ 45
-    public static let temparatureIcon5 = UIImage(named: "temparature5") // 46 ~ 55
-    public static let temparatureIcon6 = UIImage(named: "temparature6") // 56 ~ 100
+    public static let temparatureIcon1 = UIImage(named: "temparature1") // 0 < x < 16
+    public static let temparatureIcon2 = UIImage(named: "temparature2") // 16 <= x < 26
+    public static let temparatureIcon3 = UIImage(named: "temparature3") // 26 <= x < 37.6
+    public static let temparatureIcon4 = UIImage(named: "temparature4") // 37.6 <= x < 46
+    public static let temparatureIcon5 = UIImage(named: "temparature5") // 46 <= x < 56
+    public static let temparatureIcon6 = UIImage(named: "temparature6") // 56 <= x < 100
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Properties
     
@@ -30,10 +30,18 @@ class BaseViewController: UIViewController {
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         view.addSubview(activityIndicator)
+        
+        setUI()
+        setLayout()
     }
+    
+    func setUI() {}
+    
+    func setLayout() {}
 }
 
 // MARK: - Custom Methods
@@ -49,15 +57,6 @@ extension BaseViewController {
         
         self.tabBarController?.tabBar.isHidden = false
     }
-    
-//    /// 화면 터치시 키보드 내리는 메서드
-//    func hideKeyboardWhenTappedAround() {
-//
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-//        tap.delegate = self
-//        tap.cancelsTouchesInView = false
-//        view.addGestureRecognizer(tap)
-//    }
 }
 
 // MARK: - Custom Methods(화면전환)
