@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
+		C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2D2A135E4A00FACA8E /* UILabel+.swift */; };
 		DF1841C92A11BD1A001A466A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841C82A11BD1A001A466A /* AppDelegate.swift */; };
 		DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841CA2A11BD1A001A466A /* SceneDelegate.swift */; };
 		DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841CC2A11BD1A001A466A /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C3FFFB2D2A135E4A00FACA8E /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		DF1841C52A11BD1A001A466A /* SOPT-32nd-APP4-CarrotiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-32nd-APP4-CarrotiOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1841C82A11BD1A001A466A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF1841CA2A11BD1A001A466A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				DF1842312A120BCD001A466A /* UIView+.swift */,
 				DF18422F2A120B55001A466A /* Int+.swift */,
 				DF1842352A1268F6001A466A /* UIViewController+.swift */,
+				C3FFFB2D2A135E4A00FACA8E /* UILabel+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				DF1841FE2A11C426001A466A /* e.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,
 				DF1842022A11C433001A466A /* g.swift in Sources */,
+				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
 				DF1842102A11C463001A466A /* n.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
