@@ -41,6 +41,7 @@ class HeaderView: UIView {
     }
 }
 
+// MARK: - extension
 extension HeaderView {
     private func setUI() {
         self.backgroundColor = .white
@@ -79,6 +80,7 @@ extension HeaderView {
     }
 }
 
+// MARK: - CALayer Extension
 extension CALayer {
     func addBorder(_ arr_edge: [UIRectEdge], color: UIColor, width: CGFloat) {
         for edge in arr_edge {
