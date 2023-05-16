@@ -40,6 +40,7 @@ class HeaderView: UIView {
 extension HeaderView {
     private func setUI() {
         self.backgroundColor = .white
+        self.layer.addBorder([.bottom], color: Color.carrotGray2!, width: 0.4)
     }
     
     private func setLayout() {
