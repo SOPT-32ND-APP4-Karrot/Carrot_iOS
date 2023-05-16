@@ -15,6 +15,8 @@ final class ChatViewController: UIViewController {
     //MARK: Components
     let headerView = HeaderView()
     
+    let chatHeader = ChatHeader()
+    
     private let headerViewTitle = UILabel().then {
         $0.font = .title
         $0.text = "마포아씨"
@@ -38,21 +40,29 @@ extension ChatViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(headerView)
-         headerView.addSubviews(headerViewTitle, headerViewCallButton)
-         
-         headerView.snp.makeConstraints {
-             $0.top.equalToSuperview().offset(44)
-             $0.horizontalEdges.equalTo(self.view.safeAreaLayoutGuide)
-             $0.height.equalTo(44)
-         }
-         headerViewTitle.snp.makeConstraints {
-             $0.centerY.equalToSuperview()
-             $0.centerX.equalToSuperview()
-         }
+        view.addSubviews(chatHeader, headerView)
+        headerView.addSubviews(headerViewTitle, headerViewCallButton)
+        
+        headerView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(44)
+            $0.horizontalEdges.equalTo(self.view.safeAreaLayoutGuide)
+            $0.height.equalTo(44)
+        }
+        
+        headerViewTitle.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.centerX.equalToSuperview()
+        }
+        
         headerViewCallButton.snp.makeConstraints{
             $0.centerY.equalToSuperview()
-            $0.trailing.equalTo(headerView.moreButton.snp.leading).inset(11)
+            $0.trailing.equalTo(headerView.moreButton.snp.leading).offset(-11)
+        }
+        
+        chatHeader.snp.makeConstraints{
+            $0.top.equalTo(headerView.snp.bottom)
+            $0.horizontalEdges.equalTo(self.view.safeAreaLayoutGuide)
+            $0.height.equalTo(115)
         }
     }
 }

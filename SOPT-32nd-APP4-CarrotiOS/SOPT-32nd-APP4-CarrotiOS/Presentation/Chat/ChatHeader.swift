@@ -16,6 +16,7 @@ class ChatHeader: UIView {
     private let productImageView = UIImageView().then{
         $0.image = UIImage(named: "다이어리")
         $0.layer.cornerRadius = 4
+        $0.clipsToBounds = true
     }
     
     private let statusLabel = UILabel().then {
@@ -41,12 +42,15 @@ class ChatHeader: UIView {
     
     private let reviewButton = UIButton().then {
         $0.setTitle("거래 후기 보기", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
         $0.titleLabel!.font = .body6
-        $0.backgroundColor = .white
         $0.layer.cornerRadius = 3
+        $0.clipsToBounds = true
         $0.layer.borderWidth = 1
         $0.layer.borderColor = Color.carrotGray2?.cgColor
         $0.setImage(Image.chatPenIcon, for: .normal)
+        $0.titleEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: -4)
+        $0.imageEdgeInsets = .init(top: 0, left: -4, bottom: 0, right: 0)
     }
     
     override init(frame: CGRect) {
@@ -98,7 +102,7 @@ extension ChatHeader {
             $0.leading.equalTo(statusLabel.snp.trailing).offset(2)
         }
         priceLabel.snp.makeConstraints{
-            $0.top.equalTo(statusLabel.snp.bottom).offset(1)
+            $0.top.equalTo(statusLabel.snp.bottom).offset(5)
             $0.leading.equalTo(productImageView.snp.trailing).offset(13)
         }
         proposalLabel.snp.makeConstraints{
