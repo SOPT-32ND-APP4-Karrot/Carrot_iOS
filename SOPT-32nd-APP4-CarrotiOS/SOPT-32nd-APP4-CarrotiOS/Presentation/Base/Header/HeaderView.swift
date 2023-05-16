@@ -45,7 +45,7 @@ class HeaderView: UIView {
 extension HeaderView {
     private func setUI() {
         self.backgroundColor = .white
-        self.layer.addBorder([.bottom], color: Color.carrotGray2!, width: 0.4)
+        addBottomBorder(with: Color.carrotGray2, andWidth: 0.4)
     }
     
     private func setLayout() {
@@ -78,31 +78,12 @@ extension HeaderView {
     private func backButtonDidTap() {
         self.handleBackButtonDelegate?.popView()
     }
-}
-
-// MARK: - CALayer Extension
-extension CALayer {
-    func addBorder(_ arr_edge: [UIRectEdge], color: UIColor, width: CGFloat) {
-        for edge in arr_edge {
-            let border = CALayer()
-            switch edge {
-            case UIRectEdge.top:
-                border.frame = CGRect.init(x: 0, y: 0, width: frame.width, height: width)
-                break
-            case UIRectEdge.bottom:
-                border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width, height: width)
-                break
-            case UIRectEdge.left:
-                border.frame = CGRect.init(x: 0, y: 0, width: width, height: frame.height)
-                break
-            case UIRectEdge.right:
-                border.frame = CGRect.init(x: frame.width - width, y: 0, width: width, height: frame.height)
-                break
-            default:
-                break
-            }
-            border.backgroundColor = color.cgColor;
-            self.addSublayer(border)
-        }
+    
+    func addBottomBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        border.frame = CGRect(x: 0, y: frame.height, width: self.frame.width, height: borderWidth)
+        self.addSubview(border)
     }
 }
