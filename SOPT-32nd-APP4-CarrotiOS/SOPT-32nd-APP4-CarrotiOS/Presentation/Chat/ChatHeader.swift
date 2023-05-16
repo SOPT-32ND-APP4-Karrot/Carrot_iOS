@@ -71,12 +71,46 @@ extension ChatHeader {
     
     private func setLayout() {
         
+        self.addSubviews(
+            productImageView,
+            statusLabel,
+            productLabel,
+            priceLabel,
+            proposalLabel,
+            reviewButton)
         
         self.snp.makeConstraints {
             $0.width.equalTo(UIScreen.main.bounds.size.width)
             $0.height.equalTo(115)
         }
         
+        productImageView.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(18)
+            $0.leading.equalToSuperview().offset(16)
+            $0.width.height.equalTo(40)
+        }
+        statusLabel.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(16)
+            $0.leading.equalTo(productImageView.snp.trailing).offset(12)
+        }
+        productLabel.snp.makeConstraints{
+            $0.top.equalTo(statusLabel)
+            $0.leading.equalTo(statusLabel.snp.trailing).offset(2)
+        }
+        priceLabel.snp.makeConstraints{
+            $0.top.equalTo(statusLabel.snp.bottom).offset(1)
+            $0.leading.equalTo(productImageView.snp.trailing).offset(13)
+        }
+        proposalLabel.snp.makeConstraints{
+            $0.top.equalTo(priceLabel)
+            $0.leading.equalTo(priceLabel.snp.trailing).offset(4)
+        }
+        reviewButton.snp.makeConstraints{
+            $0.top.equalTo(productImageView.snp.bottom).offset(10)
+            $0.leading.equalTo(productImageView)
+            $0.height.equalTo(30)
+            $0.width.equalTo(112)
+        }
     }
     
     private func setAddTarget() {
