@@ -24,7 +24,7 @@ class HeaderView: UIView {
         $0.setImage(Image.chatArrowLeftIcon, for: .normal)
     }
     
-    private let moreButton = UIButton().then {
+    let moreButton = UIButton().then {
         $0.setImage(Image.chatMoreIcon, for: .normal)
     }
     

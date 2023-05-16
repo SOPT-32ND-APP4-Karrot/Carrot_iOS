@@ -20,6 +20,10 @@ final class ChatViewController: UIViewController {
         $0.text = "마포아씨"
     }
     
+    private let headerViewCallButton = UIButton().then {
+        $0.setImage(Image.chatPhoneIcon, for: .normal)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +39,7 @@ extension ChatViewController {
     
     private func setLayout() {
         view.addSubviews(headerView)
-         headerView.addSubviews(headerViewTitle)
+         headerView.addSubviews(headerViewTitle, headerViewCallButton)
          
          headerView.snp.makeConstraints {
              $0.top.equalToSuperview().offset(44)
@@ -46,5 +50,9 @@ extension ChatViewController {
              $0.centerY.equalToSuperview()
              $0.centerX.equalToSuperview()
          }
+        headerViewCallButton.snp.makeConstraints{
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalTo(headerView.moreButton.snp.leading).inset(11)
+        }
     }
 }
