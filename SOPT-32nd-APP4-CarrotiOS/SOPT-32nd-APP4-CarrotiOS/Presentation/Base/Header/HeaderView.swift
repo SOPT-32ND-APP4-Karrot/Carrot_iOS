@@ -20,8 +20,12 @@ class HeaderView: UIView {
     weak var handleBackButtonDelegate: HandleBackButtonDelegate?
     
     // MARK: Component
-    private let backButton: UIButton = UIButton().then {
+    private let backButton = UIButton().then {
         $0.setImage(Image.chatArrowLeftIcon, for: .normal)
+    }
+    
+    private let moreButton = UIButton().then {
+        $0.setImage(Image.chatMoreIcon, for: .normal)
     }
     
     override init(frame: CGRect) {
@@ -44,8 +48,9 @@ extension HeaderView {
     }
     
     private func setLayout() {
-        self.addSubview(
-            backButton
+        self.addSubviews(
+            backButton,
+            moreButton
         )
         
         self.snp.makeConstraints {
@@ -56,7 +61,11 @@ extension HeaderView {
         backButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().inset(22)
-            $0.width.height.equalTo(32)
+        }
+        
+        moreButton.snp.makeConstraints{
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(20)
         }
     }
     
