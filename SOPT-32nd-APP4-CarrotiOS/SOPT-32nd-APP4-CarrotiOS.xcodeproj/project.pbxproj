@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		DF1841C92A11BD1A001A466A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841C82A11BD1A001A466A /* AppDelegate.swift */; };
 		DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841CA2A11BD1A001A466A /* SceneDelegate.swift */; };
 		DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841CC2A11BD1A001A466A /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DF1841C52A11BD1A001A466A /* SOPT-32nd-APP4-CarrotiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-32nd-APP4-CarrotiOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1841C82A11BD1A001A466A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF1841CA2A11BD1A001A466A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3FFFB242A13393400FACA8E /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFFB252A13394500FACA8E /* HeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		DF1841BC2A11BD1A001A466A = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +268,7 @@
 		DF1841EB2A11C2A9001A466A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C3FFFB242A13393400FACA8E /* Header */,
 				DF1842332A120CB0001A466A /* BaseViewController.swift */,
 				DF1842372A127550001A466A /* BaseView.swift */,
 			);
@@ -436,6 +447,7 @@
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
 				DF1842102A11C463001A466A /* n.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
+				C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */,
 				DF18420E2A11C45D001A466A /* m.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
