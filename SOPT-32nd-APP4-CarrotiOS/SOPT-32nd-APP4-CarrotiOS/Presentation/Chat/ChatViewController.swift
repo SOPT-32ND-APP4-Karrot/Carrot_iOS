@@ -19,6 +19,7 @@ final class ChatViewController: UIViewController {
     
     private let headerViewTitle = UILabel().then {
         $0.font = .title
+        $0.addLineHeight(lineHeight: 28)
         $0.text = "마포아씨"
     }
     
