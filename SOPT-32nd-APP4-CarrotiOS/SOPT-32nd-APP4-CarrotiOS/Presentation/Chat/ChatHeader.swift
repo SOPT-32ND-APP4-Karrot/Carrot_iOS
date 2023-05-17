@@ -21,29 +21,33 @@ class ChatHeader: UIView {
     
     private let statusLabel = UILabel().then {
         $0.font = .body3
-        $0.text = "거래완료"
+        $0.setTextWithLineHeight(text: "거래완료", lineHeight: 22)
     }
     
     private let productLabel = UILabel().then {
         $0.font = .body5
-        $0.text = "스타벅스 다이어리 그린 9,000(쿠폰없음)"
+        $0.setTextWithLineHeight(text: "스타벅스 다이어리 그린 9,000(쿠폰없음)", lineHeight: 22)
     }
     
     private let priceLabel = UILabel().then {
         $0.font = .body3
-        $0.text = "9,000원"
+        $0.setTextWithLineHeight(text: "9,000원", lineHeight: 22)
+        
     }
     
     private let proposalLabel = UILabel().then {
         $0.font = .body5
+        $0.setTextWithLineHeight(text: "(가격제안불가)", lineHeight: 22)
         $0.textColor = Color.carrotGray4!
-        $0.text = "(가격제안불가)"
     }
     
     private let reviewButton = UIButton().then {
         $0.setTitle("거래 후기 보기", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel!.font = .body6
+        
+        $0.titleLabel!.setTextWithLineHeight(text: "", lineHeight: 18)
+        $0.titleLabel!.addLetterSpacing(0.02)
         $0.layer.cornerRadius = 3
         $0.clipsToBounds = true
         $0.layer.borderWidth = 1
@@ -102,7 +106,7 @@ extension ChatHeader {
             $0.leading.equalTo(statusLabel.snp.trailing).offset(2)
         }
         priceLabel.snp.makeConstraints{
-            $0.top.equalTo(statusLabel.snp.bottom).offset(5)
+            $0.top.equalTo(statusLabel.snp.bottom).offset(1)
             $0.leading.equalTo(productImageView.snp.trailing).offset(13)
         }
         proposalLabel.snp.makeConstraints{
