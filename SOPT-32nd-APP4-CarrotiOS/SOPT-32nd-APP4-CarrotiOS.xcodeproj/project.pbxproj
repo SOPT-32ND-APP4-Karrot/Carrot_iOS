@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		055970542A14BEDF00868C42 /* SaleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970532A14BEDF00868C42 /* SaleHeaderView.swift */; };
-		055970562A14BF5200868C42 /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970552A14BF5200868C42 /* SaleViewController.swift */; };
-		055970582A14C7E800868C42 /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970572A14C7E800868C42 /* SaleDummyTableViewCell.swift */; };
+		C36D9F9A2A168E5A006B155F /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */; };
+		C36D9F9C2A168E6A006B155F /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9B2A168E6A006B155F /* SaleViewController.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -49,8 +49,8 @@
 
 /* Begin PBXFileReference section */
 		055970532A14BEDF00868C42 /* SaleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleHeaderView.swift; sourceTree = "<group>"; };
-		055970552A14BF5200868C42 /* SaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SaleViewController.swift; path = "../../../../../../.Trash/Carrot_iOS/SOPT-32nd-APP4-CarrotiOS/SOPT-32nd-APP4-CarrotiOS/Presentation/Sale/SaleViewController.swift"; sourceTree = "<group>"; };
-		055970572A14C7E800868C42 /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SaleDummyTableViewCell.swift; path = "../../../../../../.Trash/Carrot_iOS/SOPT-32nd-APP4-CarrotiOS/SOPT-32nd-APP4-CarrotiOS/Presentation/Sale/SaleDummyTableViewCell.swift"; sourceTree = "<group>"; };
+		C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleDummyTableViewCell.swift; sourceTree = "<group>"; };
+		C36D9F9B2A168E6A006B155F /* SaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -262,9 +262,9 @@
 		DF1841E82A11C299001A466A /* Sale */ = {
 			isa = PBXGroup;
 			children = (
+				C36D9F9B2A168E6A006B155F /* SaleViewController.swift */,
+				C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */,
 				055970532A14BEDF00868C42 /* SaleHeaderView.swift */,
-				055970552A14BF5200868C42 /* SaleViewController.swift */,
-				055970572A14C7E800868C42 /* SaleDummyTableViewCell.swift */,
 			);
 			path = Sale;
 			sourceTree = "<group>";
@@ -445,12 +445,12 @@
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
 				DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */,
+				C36D9F9C2A168E6A006B155F /* SaleViewController.swift in Sources */,
 				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
 				DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */,
 				DF1842382A127550001A466A /* BaseView.swift in Sources */,
 				C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */,
-				055970582A14C7E800868C42 /* SaleDummyTableViewCell.swift in Sources */,
 				DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */,
 				DF1841F82A11C405001A466A /* Color.swift in Sources */,
 				DF1842122A11C46D001A466A /* o.swift in Sources */,
@@ -461,10 +461,10 @@
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
 				DF1842102A11C463001A466A /* n.swift in Sources */,
+				C36D9F9A2A168E5A006B155F /* SaleDummyTableViewCell.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
 				C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */,
 				DF18420E2A11C45D001A466A /* m.swift in Sources */,
-				055970562A14BF5200868C42 /* SaleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
