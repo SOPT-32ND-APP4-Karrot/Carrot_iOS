@@ -31,6 +31,7 @@ final class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         setStyle()
+        setDelegate()
         setLayout()
     }
 }
@@ -38,6 +39,10 @@ final class ChatViewController: UIViewController {
 extension ChatViewController {
     private func setStyle() {
         view.backgroundColor = .white
+    }
+    
+    private func setDelegate() {
+        headerView.handleBackButtonDelegate = self
     }
     
     private func setLayout() {
@@ -65,5 +70,11 @@ extension ChatViewController {
             $0.horizontalEdges.equalTo(self.view.safeAreaLayoutGuide)
             $0.height.equalTo(115)
         }
+    }
+}
+
+extension ChatViewController: HandleBackButtonDelegate {
+    func popView() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
