@@ -35,7 +35,8 @@ final class ChatReceiveTableViewCell: UITableViewCell {
     private func setLayout() {
         self.addSubview(receiveView)
         receiveView.snp.makeConstraints{
-            $0.edges.equalToSuperview()
+            $0.top.bottom.height.equalToSuperview()
+            $0.leading.equalToSuperview().offset(15)
         }
     }
 }

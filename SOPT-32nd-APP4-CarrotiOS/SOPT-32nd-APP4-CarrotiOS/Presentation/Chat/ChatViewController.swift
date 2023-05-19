@@ -26,7 +26,6 @@ final class ChatViewController: UIViewController {
         $0.delegate = self
         $0.dataSource = self
         $0.backgroundColor = .clear
-        //                $0.rowHeight = 90
     }
     
     private let headerViewTitle = UILabel().then {

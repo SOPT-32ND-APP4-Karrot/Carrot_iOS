@@ -35,8 +35,8 @@ final class ChatSendTableViewCell: UITableViewCell {
     private func setLayout() {
         self.addSubview(sendView)
         sendView.snp.makeConstraints{
-            $0.edges.equalToSuperview()
+            $0.top.bottom.height.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(15)
         }
-        
     }
 }
