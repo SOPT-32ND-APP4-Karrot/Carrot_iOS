@@ -17,9 +17,9 @@ final class ChatViewController: UIViewController {
     
     let chatHeader = ChatHeader()
     
-    let guideView = ReceiveView()
+//    let receiveView = ReceiveView()
     
-    let sendView = SendView()
+//    let sendView = SendView()
     
     private let headerViewTitle = UILabel().then {
         $0.font = .title
@@ -50,7 +50,11 @@ extension ChatViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(chatHeader, headerView, guideView, sendView)
+        view.addSubviews(chatHeader,
+                         headerView
+//                         receiveView,
+//                         sendView
+        )
         headerView.addSubviews(headerViewTitle, headerViewCallButton)
         
         headerView.snp.makeConstraints {
@@ -75,17 +79,18 @@ extension ChatViewController {
             $0.height.equalTo(115)
         }
         
-        guideView.snp.makeConstraints{
-            $0.top.equalTo(chatHeader.snp.bottom).offset(100)
-            $0.leading.equalTo(12)
-            $0.width.height.equalToSuperview()
-        }
-        
-        sendView.snp.makeConstraints{
-            $0.top.equalTo(guideView.snp.bottom).offset(7)
-            $0.trailing.equalTo(15)
-            $0.width.height.equalToSuperview()
-        }
+//        receiveView.snp.makeConstraints{
+//            $0.top.equalTo(chatHeader.snp.bottom).offset(100)
+//            $0.leading.equalTo(12)
+//            $0.width.equalToSuperview()
+//            $0.height.equalTo(63)
+//        }
+//
+//        sendView.snp.makeConstraints{
+//            $0.top.equalTo(receiveView.snp.bottom).offset(7)
+//            $0.trailing.equalToSuperview().inset(15)
+//            $0.height.equalTo(38)
+//        }
     }
 }
 
