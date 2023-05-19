@@ -40,9 +40,11 @@ class SaleViewController: BaseViewController {
         self.saleTableView.tableHeaderView = headerView
         self.saleTableView.register(SaleDummyTableViewCell.self,
                                     forCellReuseIdentifier: SaleDummyTableViewCell.identifier)
+        self.saleTableView.register(SaleFirstSectionCell.self,
+                                    forCellReuseIdentifier: SaleFirstSectionCell.identifier)
         self.saleTableView.tableHeaderView?.frame = .init(origin: .zero,
                                                           size: .init(width: UIScreen.main.bounds.width,
-                                                                      height: 300))
+                                                                      height: 383))
     }
     
 }
@@ -60,16 +62,31 @@ extension SaleViewController: UITableViewDelegate {
 
 extension SaleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        if section == 0 {
+            return 1
+        } else {
+            return 30
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SaleDummyTableViewCell.identifier) as? SaleDummyTableViewCell else {return UITableViewCell()}
-        return cell
+        guard let dummyCell = tableView.dequeueReusableCell(withIdentifier: SaleDummyTableViewCell.identifier) as? SaleDummyTableViewCell else {return UITableViewCell()}
+        
+        guard let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: SaleFirstSectionCell.identifier) as? SaleFirstSectionCell else {return UITableViewCell()}
+
+        if indexPath.section == 0 {
+            return firstSectionCell
+        } else {
+            return dummyCell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 81
     }
     
 }

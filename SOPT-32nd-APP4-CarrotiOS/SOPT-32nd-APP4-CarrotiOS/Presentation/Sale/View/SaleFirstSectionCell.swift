@@ -77,6 +77,7 @@ class SaleFirstSectionCell: UITableViewCell {
             $0.progress = 0.5
             $0.progressTintColor = Color.carrotGreen
             $0.trackTintColor = Color.carrotGray2
+            $0.progress = 0.7
         }
         
         mannerLabel.do {
@@ -109,6 +110,11 @@ class SaleFirstSectionCell: UITableViewCell {
         userInfoStackView.snp.makeConstraints {
             $0.leading.equalTo(userProfileImage.snp.trailing).offset(7)
             $0.centerY.equalTo(userProfileImage)
+        }
+        
+        userMannerProgressView.snp.makeConstraints {
+            $0.height.equalTo(4)
+            $0.width.equalTo(50)
         }
         
         mannerStackView.snp.makeConstraints {
