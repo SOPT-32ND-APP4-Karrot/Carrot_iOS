@@ -36,18 +36,28 @@ class SendView: BaseView {
         self.addSubviews(messageView, timeLabel)
         
         messageView.addSubview(receiveLabel)
-
+        
+        self.snp.makeConstraints {
+            $0.width.equalTo(UIScreen.main.bounds.size.width)
+            //TODO: 동적으로 설정
+            $0.height.equalTo(38)
+        }
+        
         messageView.snp.makeConstraints{
             $0.top.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            //TODO: 동적으로 설정
             $0.width.equalTo(187)
             $0.height.equalTo(38)
         }
+        
         receiveLabel.snp.makeConstraints{
             $0.center.equalToSuperview()
         }
+        
         timeLabel.snp.makeConstraints{
             $0.bottom.equalTo(messageView).inset(5)
-            $0.trailing.equalTo(messageView.snp.leading).offset(4)
+            $0.trailing.equalTo(messageView.snp.leading).offset(-4)
         }
     }
     
