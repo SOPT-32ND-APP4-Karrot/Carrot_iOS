@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
+		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
+		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */,
 				C36D9F9D2A174169006B155F /* GuideView.swift */,
 				C32525242A17541A002629E0 /* ReceiveView.swift */,
+				C32525262A176201002629E0 /* SendView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
 				C32525252A17541A002629E0 /* ReceiveView.swift in Sources */,
 				C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */,
+				C32525272A176201002629E0 /* SendView.swift in Sources */,
 				DF18420E2A11C45D001A466A /* m.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,10 @@ final class ChatViewController: UIViewController {
     
     let chatHeader = ChatHeader()
     
+    let guideView = ReceiveView()
+    
+    let sendView = SendView()
+    
     private let headerViewTitle = UILabel().then {
         $0.font = .title
         $0.addLineHeight(lineHeight: 28)
@@ -46,7 +50,7 @@ extension ChatViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(chatHeader, headerView)
+        view.addSubviews(chatHeader, headerView, guideView, sendView)
         headerView.addSubviews(headerViewTitle, headerViewCallButton)
         
         headerView.snp.makeConstraints {
@@ -69,6 +73,18 @@ extension ChatViewController {
             $0.top.equalTo(headerView.snp.bottom)
             $0.horizontalEdges.equalTo(self.view.safeAreaLayoutGuide)
             $0.height.equalTo(115)
+        }
+        
+        guideView.snp.makeConstraints{
+            $0.top.equalTo(chatHeader.snp.bottom).offset(100)
+            $0.leading.equalTo(12)
+            $0.width.height.equalToSuperview()
+        }
+        
+        sendView.snp.makeConstraints{
+            $0.top.equalTo(guideView.snp.bottom).offset(7)
+            $0.trailing.equalTo(15)
+            $0.width.height.equalToSuperview()
         }
     }
 }
