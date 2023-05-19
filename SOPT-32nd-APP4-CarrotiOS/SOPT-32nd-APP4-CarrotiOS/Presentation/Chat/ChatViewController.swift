@@ -12,14 +12,22 @@ import Then
 
 final class ChatViewController: UIViewController {
     
+    var dummy: [Int] = [1, 2, 1, 0, 2, 1, 2, 1, 1]
+    
     //MARK: Components
     let headerView = HeaderView()
     
     let chatHeader = ChatHeader()
     
-//    let receiveView = ReceiveView()
-    
-//    let sendView = SendView()
+    private lazy var tableView = UITableView(frame: .zero, style: .plain).then {
+        $0.register(ChatGuideTableViewCell.self, forCellReuseIdentifier: ChatGuideTableViewCell.identifier)
+        $0.register(ChatReceiveTableViewCell.self, forCellReuseIdentifier: ChatReceiveTableViewCell.identifier)
+        $0.register(ChatSendTableViewCell.self, forCellReuseIdentifier: ChatSendTableViewCell.identifier)
+        $0.delegate = self
+        $0.dataSource = self
+        $0.backgroundColor = .clear
+        //                $0.rowHeight = 90
+    }
     
     private let headerViewTitle = UILabel().then {
         $0.font = .title
@@ -43,6 +51,7 @@ final class ChatViewController: UIViewController {
 extension ChatViewController {
     private func setStyle() {
         view.backgroundColor = .white
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     private func setDelegate() {
@@ -50,10 +59,10 @@ extension ChatViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(chatHeader,
-                         headerView
-//                         receiveView,
-//                         sendView
+        view.addSubviews(
+            tableView,
+            chatHeader,
+            headerView
         )
         headerView.addSubviews(headerViewTitle, headerViewCallButton)
         
@@ -79,23 +88,53 @@ extension ChatViewController {
             $0.height.equalTo(115)
         }
         
-//        receiveView.snp.makeConstraints{
-//            $0.top.equalTo(chatHeader.snp.bottom).offset(100)
-//            $0.leading.equalTo(12)
-//            $0.width.equalToSuperview()
-//            $0.height.equalTo(63)
-//        }
-//
-//        sendView.snp.makeConstraints{
-//            $0.top.equalTo(receiveView.snp.bottom).offset(7)
-//            $0.trailing.equalToSuperview().inset(15)
-//            $0.height.equalTo(38)
-//        }
+        tableView.snp.makeConstraints{
+            $0.top.equalTo(chatHeader.snp.bottom)
+            $0.width.equalToSuperview()
+            $0.height.equalToSuperview().inset(91)
+        }
     }
 }
 
 extension ChatViewController: HandleBackButtonDelegate {
     func popView() {
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dummy.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch dummy[indexPath.row] {
+        case 0:
+            guard let guideCell = tableView.dequeueReusableCell(withIdentifier: ChatGuideTableViewCell.identifier, for: indexPath) as? ChatGuideTableViewCell else { return UITableViewCell() }
+            return guideCell
+        case 1:
+            guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
+            return receiveCell
+        case 2:
+            guard let sendCell = tableView.dequeueReusableCell(withIdentifier: ChatSendTableViewCell.identifier, for: indexPath) as? ChatSendTableViewCell else { return UITableViewCell() }
+            
+            return sendCell
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        switch dummy[indexPath.row] {
+        case 0:
+            return 90
+        case 1:
+            return 75
+        case 2:
+            return 50
+        default:
+            return 50
+        }
     }
 }
