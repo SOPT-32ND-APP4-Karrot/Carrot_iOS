@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				C3FFFB292A134E8400FACA8E /* ChatViewController.swift */,
 				C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */,
+				C36D9F9D2A174169006B155F /* GuideView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				DF18420C2A11C457001A466A /* l.swift in Sources */,
 				DF1842302A120B55001A466A /* Int+.swift in Sources */,
 				DF1841FE2A11C426001A466A /* e.swift in Sources */,
+				C36D9F9E2A174169006B155F /* GuideView.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,
 				DF1842022A11C433001A466A /* g.swift in Sources */,
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
