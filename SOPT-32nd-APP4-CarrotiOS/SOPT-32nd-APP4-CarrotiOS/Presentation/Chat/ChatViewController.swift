@@ -26,6 +26,7 @@ final class ChatViewController: UIViewController {
         $0.delegate = self
         $0.dataSource = self
         $0.backgroundColor = .clear
+        $0.separatorStyle = .none
     }
     
     private let headerViewTitle = UILabel().then {
@@ -110,13 +111,15 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         switch dummy[indexPath.row] {
         case 0:
             guard let guideCell = tableView.dequeueReusableCell(withIdentifier: ChatGuideTableViewCell.identifier, for: indexPath) as? ChatGuideTableViewCell else { return UITableViewCell() }
+            guideCell.selectionStyle = .none
             return guideCell
         case 1:
             guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
+            receiveCell.selectionStyle = .none
             return receiveCell
         case 2:
             guard let sendCell = tableView.dequeueReusableCell(withIdentifier: ChatSendTableViewCell.identifier, for: indexPath) as? ChatSendTableViewCell else { return UITableViewCell() }
-            
+            sendCell.selectionStyle = .none
             return sendCell
         default:
             return UITableViewCell()
