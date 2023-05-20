@@ -14,7 +14,7 @@ class ChatHeader: UIView {
     
     // MARK: Component
     private let productImageView = UIImageView().then{
-        $0.image = UIImage(named: "다이어리")
+        $0.image = Image.saleDiaryImage
         $0.layer.cornerRadius = 4
         $0.clipsToBounds = true
     }
