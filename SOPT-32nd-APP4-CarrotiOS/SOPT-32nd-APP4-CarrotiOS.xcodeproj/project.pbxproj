@@ -11,6 +11,15 @@
 		055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */; };
 		0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970782A17FBE400868C42 /* SaleHeaderView.swift */; };
 		0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */; };
+		C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */; };
+		C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */; };
+		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
+		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
+		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
+		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
+		055970542A14BEDF00868C42 /* SaleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970532A14BEDF00868C42 /* SaleHeaderView.swift */; };
+		C36D9F9A2A168E5A006B155F /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */; };
+		C36D9F9C2A168E6A006B155F /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9B2A168E6A006B155F /* SaleViewController.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -53,6 +62,15 @@
 		055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleDummyTableViewCell.swift; sourceTree = "<group>"; };
 		055970782A17FBE400868C42 /* SaleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleHeaderView.swift; sourceTree = "<group>"; };
 		0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleFirstSectionCell.swift; sourceTree = "<group>"; };
+		C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGuideTableViewCell.swift; sourceTree = "<group>"; };
+		C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiveTableViewCell.swift; sourceTree = "<group>"; };
+		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
+		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
+		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
+		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		055970532A14BEDF00868C42 /* SaleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleHeaderView.swift; sourceTree = "<group>"; };
+		C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleDummyTableViewCell.swift; sourceTree = "<group>"; };
+		C36D9F9B2A168E6A006B155F /* SaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -274,7 +292,13 @@
 			isa = PBXGroup;
 			children = (
 				C3FFFB292A134E8400FACA8E /* ChatViewController.swift */,
+				C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */,
+				C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */,
+				C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */,
 				C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */,
+				C36D9F9D2A174169006B155F /* GuideView.swift */,
+				C32525242A17541A002629E0 /* ReceiveView.swift */,
+				C32525262A176201002629E0 /* SendView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -458,8 +482,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
+				C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */,
+				055970542A14BEDF00868C42 /* SaleHeaderView.swift in Sources */,
 				DF1842082A11C44A001A466A /* j.swift in Sources */,
 				DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */,
+				C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */,
+				C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */,
 				DF1841C92A11BD1A001A466A /* AppDelegate.swift in Sources */,
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
@@ -477,13 +505,17 @@
 				DF1842122A11C46D001A466A /* o.swift in Sources */,
 				DF18420C2A11C457001A466A /* l.swift in Sources */,
 				DF1842302A120B55001A466A /* Int+.swift in Sources */,
+				DF1841FE2A11C426001A466A /* e.swift in Sources */,
+				C36D9F9E2A174169006B155F /* GuideView.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,
 				DF1842022A11C433001A466A /* g.swift in Sources */,
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
 				DF1842102A11C463001A466A /* n.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
+				C32525252A17541A002629E0 /* ReceiveView.swift in Sources */,
 				C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */,
+				C32525272A176201002629E0 /* SendView.swift in Sources */,
 				DF18420E2A11C45D001A466A /* m.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
