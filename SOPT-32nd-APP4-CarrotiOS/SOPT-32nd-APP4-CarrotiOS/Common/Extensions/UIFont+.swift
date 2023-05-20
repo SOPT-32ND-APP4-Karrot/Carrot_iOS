@@ -58,6 +58,10 @@ extension UIFont {
         return UIFont(name: "AppleSDGothicNeo-Bold", size: 12.0)!
     }
     
+    class var body7: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Regular", size: 12.0)!
+    }
+    
     class var detail1: UIFont {
         return UIFont(name: "AppleSDGothicNeo-Medium", size: 10.0)!
     }
