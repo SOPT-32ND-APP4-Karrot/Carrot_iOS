@@ -19,6 +19,8 @@ final class ChatViewController: UIViewController {
     
     let chatHeader = ChatHeader()
     
+    let chatInputView = ChatInputView()
+    
     private lazy var tableView = UITableView(frame: .zero, style: .plain).then {
         $0.register(ChatGuideTableViewCell.self, forCellReuseIdentifier: ChatGuideTableViewCell.identifier)
         $0.register(ChatReceiveTableViewCell.self, forCellReuseIdentifier: ChatReceiveTableViewCell.identifier)
@@ -62,7 +64,8 @@ extension ChatViewController {
         view.addSubviews(
             tableView,
             chatHeader,
-            headerView
+            headerView,
+            chatInputView
         )
         headerView.addSubviews(headerViewTitle, headerViewCallButton)
         
@@ -92,6 +95,11 @@ extension ChatViewController {
             $0.top.equalTo(chatHeader.snp.bottom)
             $0.width.equalToSuperview()
             $0.bottom.equalToSuperview().inset(91)
+        }
+        
+        chatInputView.snp.makeConstraints{
+            $0.bottom.equalToSuperview()
+            $0.width.equalToSuperview()
         }
     }
 }

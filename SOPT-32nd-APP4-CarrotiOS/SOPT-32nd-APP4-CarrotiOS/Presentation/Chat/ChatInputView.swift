@@ -44,25 +44,25 @@ final class ChatInputView: BaseView {
         inputTextField.addSubviews(emojiButton)
         
         self.snp.makeConstraints {
-            $0.height.equalTo(42)
+            $0.height.equalTo(91)
             $0.width.equalTo(UIScreen.main.bounds.size.width)
         }
         
         plusButton.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(7)
+            $0.top.equalToSuperview().offset(16)
             $0.leading.equalToSuperview().offset(10)
         }
         
         inputTextField.snp.makeConstraints{
-            $0.top.equalToSuperview()
-            $0.leading.equalTo(plusButton.snp.trailing).offset(-10)
+            $0.top.equalToSuperview().offset(9)
+            $0.leading.equalTo(plusButton.snp.trailing).offset(10)
             $0.trailing.equalToSuperview().inset(48)
-            $0.height.equalToSuperview()
+            $0.height.equalTo(42)
         }
         
         emojiButton.snp.makeConstraints{
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(9)
+            $0.trailing.equalToSuperview().inset(9)
         }
         
         sendButton.snp.makeConstraints{
