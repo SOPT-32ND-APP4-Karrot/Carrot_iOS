@@ -74,13 +74,12 @@ extension SaleViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let dummyCell = tableView.dequeueReusableCell(withIdentifier: SaleDummyTableViewCell.identifier) as? SaleDummyTableViewCell else {return UITableViewCell()}
-        
-        guard let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: SaleFirstSectionCell.identifier) as? SaleFirstSectionCell else {return UITableViewCell()}
 
         if indexPath.section == 0 {
+            guard let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: SaleFirstSectionCell.identifier) as? SaleFirstSectionCell else {return UITableViewCell()}
             return firstSectionCell
         } else {
+            guard let dummyCell = tableView.dequeueReusableCell(withIdentifier: SaleDummyTableViewCell.identifier) as? SaleDummyTableViewCell else {return UITableViewCell()}
             return dummyCell
         }
     }
