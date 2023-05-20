@@ -27,7 +27,7 @@ private extension HomeViewController {
     
     private func setUI() {
         
-        view.backgroundColor = Color.carrotBlack
+        view.backgroundColor = Color.carrotWhite
     }
     
     private func setLayout() {
