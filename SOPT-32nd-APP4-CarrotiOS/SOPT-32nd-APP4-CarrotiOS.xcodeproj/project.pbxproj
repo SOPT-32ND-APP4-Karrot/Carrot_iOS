@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970752A17FBCD00868C42 /* SaleViewController.swift */; };
+		055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */; };
+		0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970782A17FBE400868C42 /* SaleHeaderView.swift */; };
+		0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */; };
 		C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */; };
 		C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */; };
 		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
-		055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */; };
-		0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970782A17FBE400868C42 /* SaleHeaderView.swift */; };
-		0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */; };
-		055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970752A17FBCD00868C42 /* SaleViewController.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -32,7 +32,6 @@
 		DF1842062A11C445001A466A /* i.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842052A11C445001A466A /* i.swift */; };
 		DF1842082A11C44A001A466A /* j.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842072A11C44A001A466A /* j.swift */; };
 		DF18420A2A11C451001A466A /* k.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842092A11C451001A466A /* k.swift */; };
-		DF18420C2A11C457001A466A /* l.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420B2A11C457001A466A /* l.swift */; };
 		DF18420E2A11C45D001A466A /* m.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420D2A11C45D001A466A /* m.swift */; };
 		DF1842102A11C463001A466A /* n.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420F2A11C463001A466A /* n.swift */; };
 		DF1842122A11C46D001A466A /* o.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842112A11C46D001A466A /* o.swift */; };
@@ -54,19 +53,20 @@
 		DF18423A2A178028001A466A /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842392A178028001A466A /* HomeHeaderView.swift */; };
 		DF18423C2A1795BE001A466A /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18423B2A1795BE001A466A /* UIStackView+.swift */; };
 		DF18423E2A179E57001A466A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18423D2A179E57001A466A /* HomeViewController.swift */; };
+		DF4702522A189FC000A71214 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702512A189FC000A71214 /* HomeDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055970752A17FBCD00868C42 /* SaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
+		055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleDummyTableViewCell.swift; sourceTree = "<group>"; };
+		055970782A17FBE400868C42 /* SaleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleHeaderView.swift; sourceTree = "<group>"; };
+		0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleFirstSectionCell.swift; sourceTree = "<group>"; };
 		C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGuideTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
-		055970752A17FBCD00868C42 /* SaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
-		055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleDummyTableViewCell.swift; sourceTree = "<group>"; };
-		055970782A17FBE400868C42 /* SaleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleHeaderView.swift; sourceTree = "<group>"; };
-		0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleFirstSectionCell.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -84,7 +84,6 @@
 		DF1842052A11C445001A466A /* i.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i.swift; sourceTree = "<group>"; };
 		DF1842072A11C44A001A466A /* j.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = j.swift; sourceTree = "<group>"; };
 		DF1842092A11C451001A466A /* k.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = k.swift; sourceTree = "<group>"; };
-		DF18420B2A11C457001A466A /* l.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = l.swift; sourceTree = "<group>"; };
 		DF18420D2A11C45D001A466A /* m.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m.swift; sourceTree = "<group>"; };
 		DF18420F2A11C463001A466A /* n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n.swift; sourceTree = "<group>"; };
 		DF1842112A11C46D001A466A /* o.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = o.swift; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		DF1842392A178028001A466A /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		DF18423B2A1795BE001A466A /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		DF18423D2A179E57001A466A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DF4702512A189FC000A71214 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,7 +389,7 @@
 		DF1841F42A11C2D9001A466A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DF18420B2A11C457001A466A /* l.swift */,
+				DF4702512A189FC000A71214 /* HomeDataModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -485,7 +485,6 @@
 				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
 				DF1842082A11C44A001A466A /* j.swift in Sources */,
 				DF18423C2A1795BE001A466A /* UIStackView+.swift in Sources */,
-				DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */,
 				C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */,
 				C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */,
 				DF1841C92A11BD1A001A466A /* AppDelegate.swift in Sources */,
@@ -505,9 +504,8 @@
 				DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */,
 				DF1841F82A11C405001A466A /* Color.swift in Sources */,
 				DF1842122A11C46D001A466A /* o.swift in Sources */,
-				DF18420C2A11C457001A466A /* l.swift in Sources */,
 				DF1842302A120B55001A466A /* Int+.swift in Sources */,
-				DF1841FE2A11C426001A466A /* e.swift in Sources */,
+				DF4702522A189FC000A71214 /* HomeDataModel.swift in Sources */,
 				C36D9F9E2A174169006B155F /* GuideView.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,
 				DF1842022A11C433001A466A /* g.swift in Sources */,
