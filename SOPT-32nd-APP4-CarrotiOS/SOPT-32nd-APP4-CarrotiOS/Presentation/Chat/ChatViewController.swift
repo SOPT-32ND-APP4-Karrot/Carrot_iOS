@@ -91,7 +91,7 @@ extension ChatViewController {
         tableView.snp.makeConstraints{
             $0.top.equalTo(chatHeader.snp.bottom)
             $0.width.equalToSuperview()
-            $0.height.equalToSuperview().inset(91)
+            $0.bottom.equalToSuperview().inset(91)
         }
     }
 }
