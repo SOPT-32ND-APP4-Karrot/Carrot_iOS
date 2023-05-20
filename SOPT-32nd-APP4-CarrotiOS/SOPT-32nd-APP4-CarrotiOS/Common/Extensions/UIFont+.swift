@@ -81,6 +81,4 @@ extension UIFont {
     class var number3: UIFont {
         return UIFont(name: "Pretendard-Bold", size: 12.0)!
     }
-    
-
 }
