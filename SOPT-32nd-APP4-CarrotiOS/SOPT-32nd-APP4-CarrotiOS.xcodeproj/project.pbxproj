@@ -13,9 +13,10 @@
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
-		055970542A14BEDF00868C42 /* SaleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970532A14BEDF00868C42 /* SaleHeaderView.swift */; };
-		C36D9F9A2A168E5A006B155F /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */; };
-		C36D9F9C2A168E6A006B155F /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9B2A168E6A006B155F /* SaleViewController.swift */; };
+		055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */; };
+		0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970782A17FBE400868C42 /* SaleHeaderView.swift */; };
+		0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */; };
+		055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055970752A17FBCD00868C42 /* SaleViewController.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -60,9 +61,10 @@
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
-		055970532A14BEDF00868C42 /* SaleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleHeaderView.swift; sourceTree = "<group>"; };
-		C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleDummyTableViewCell.swift; sourceTree = "<group>"; };
-		C36D9F9B2A168E6A006B155F /* SaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
+		055970752A17FBCD00868C42 /* SaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
+		055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleDummyTableViewCell.swift; sourceTree = "<group>"; };
+		055970782A17FBE400868C42 /* SaleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleHeaderView.swift; sourceTree = "<group>"; };
+		0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleFirstSectionCell.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -113,6 +115,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055970712A17FB9400868C42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				055970772A17FBE400868C42 /* SaleDummyTableViewCell.swift */,
+				055970782A17FBE400868C42 /* SaleHeaderView.swift */,
+				0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		055970722A17FB9B00868C42 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				055970752A17FBCD00868C42 /* SaleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		C3FFFB242A13393400FACA8E /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,9 +300,8 @@
 		DF1841E82A11C299001A466A /* Sale */ = {
 			isa = PBXGroup;
 			children = (
-				C36D9F9B2A168E6A006B155F /* SaleViewController.swift */,
-				C36D9F992A168E5A006B155F /* SaleDummyTableViewCell.swift */,
-				055970532A14BEDF00868C42 /* SaleHeaderView.swift */,
+				055970722A17FB9B00868C42 /* ViewController */,
+				055970712A17FB9400868C42 /* View */,
 			);
 			path = Sale;
 			sourceTree = "<group>";
@@ -457,7 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */,
-				055970542A14BEDF00868C42 /* SaleHeaderView.swift in Sources */,
+				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
 				DF1842082A11C44A001A466A /* j.swift in Sources */,
 				DF1841CD2A11BD1A001A466A /* ViewController.swift in Sources */,
 				C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */,
@@ -466,11 +485,13 @@
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
 				DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */,
-				C36D9F9C2A168E6A006B155F /* SaleViewController.swift in Sources */,
+				055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */,
 				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
 				DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */,
+				0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */,
 				DF1842382A127550001A466A /* BaseView.swift in Sources */,
+				055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */,
 				C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */,
 				DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */,
 				DF1841F82A11C405001A466A /* Color.swift in Sources */,
@@ -484,7 +505,6 @@
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
 				DF1842102A11C463001A466A /* n.swift in Sources */,
-				C36D9F9A2A168E5A006B155F /* SaleDummyTableViewCell.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
 				C32525252A17541A002629E0 /* ReceiveView.swift in Sources */,
 				C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */,
