@@ -25,73 +25,47 @@ extension UIViewController {
     
     @objc
     func dismissKeyboard() {
-        
         view.endEditing(true)
     }
     
-//    func setKeyboardObserver() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object:nil)
-//    }
-//
-//    @objc func keyboardWillShow(notification: NSNotification) {
-//        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-//            let keyboardRectangle = keyboardFrame.cgRectValue
-//            let keyboardHeight = keyboardRectangle.height
-//            UIView.animate(withDuration: 1) {
-//                self.view.window?.frame.origin.y -= keyboardHeight - 32
-//            }
-//        }
-//    }
-//
-//
-//    @objc func keyboardWillHide(notification: NSNotification) {
-//        if self.view.window?.frame.origin.y != 0 {
-//            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-//                let keyboardRectangle = keyboardFrame.cgRectValue
-//                let keyboardHeight = keyboardRectangle.height
-//                UIView.animate(withDuration: 1) {
-//                    self.view.window?.frame.origin.y += keyboardHeight - 32
-//                }
-//            }
-//        }
-//
-//    }
-    
-    // 노티피케이션을 추가하는 메서드
-    func addKeyboardNotifications(){
-        // 키보드가 나타날 때 앱에게 알리는 메서드 추가
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification , object: nil)
-        // 키보드가 사라질 때 앱에게 알리는 메서드 추가
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-
-    // 노티피케이션을 제거하는 메서드
-    func removeKeyboardNotifications(){
-        // 키보드가 나타날 때 앱에게 알리는 메서드 제거
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification , object: nil)
-        // 키보드가 사라질 때 앱에게 알리는 메서드 제거
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    func setKeyboardObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object:nil)
     }
     
-    // 키보드가 나타났다는 알림을 받으면 실행할 메서드
-    @objc func keyboardWillShow(_ noti: NSNotification){
-        // 키보드의 높이만큼 화면을 올려준다.
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y -= keyboardHeight - 32
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        
+        let keyboardHeight = keyboardFrame.height
+        let intersection = keyboardFrame.intersection(view.frame)
+        
+        if intersection.height > 0 {
+            if let textField = findFirstResponder() as? UITextField, let textFieldSuperview = textField.superview {
+                let textFieldBottom = textFieldSuperview.convert(textField.frame, to: view).maxY
+                let keyboardOverlap = keyboardHeight - (view.bounds.height - textFieldBottom)
+                if keyboardOverlap > 0 {
+                    UIView.animate(withDuration: 1) {
+                        self.view.frame.origin.y -= keyboardHeight - 32
+                    }
+                    return
+                }
+            }
+            UIView.animate(withDuration: 1) {
+                self.view.frame.origin.y -= keyboardHeight - 32
+            }
         }
     }
-
-    // 키보드가 사라졌다는 알림을 받으면 실행할 메서드
-    @objc func keyboardWillHide(_ noti: NSNotification){
-        // 키보드의 높이만큼 화면을 내려준다.
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y += keyboardHeight - 32
+    
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        UIView.animate(withDuration: 1) {
+            self.view.frame.origin.y = 0
         }
+    }
+    
+    func findFirstResponder() -> UIView? {
+        return view.findFirstResponder()
     }
 }
