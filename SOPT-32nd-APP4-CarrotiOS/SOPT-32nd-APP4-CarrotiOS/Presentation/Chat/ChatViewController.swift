@@ -47,6 +47,14 @@ final class ChatViewController: UIViewController {
         setStyle()
         setDelegate()
         setLayout()
+        hideKeyboardWhenTappedAround()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardNotifications()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardNotifications()
     }
 }
 
