@@ -42,9 +42,13 @@ class SaleViewController: BaseViewController {
                                     forCellReuseIdentifier: SaleDummyTableViewCell.identifier)
         self.saleTableView.register(SaleFirstSectionCell.self,
                                     forCellReuseIdentifier: SaleFirstSectionCell.identifier)
+        self.saleTableView.register(SaleSecondSectionCell.self,
+                                    forCellReuseIdentifier: SaleSecondSectionCell.identifier)
         self.saleTableView.tableHeaderView?.frame = .init(origin: .zero,
                                                           size: .init(width: UIScreen.main.bounds.width,
                                                                       height: 383))
+        self.saleTableView.rowHeight = UITableView.automaticDimension
+        self.saleTableView.estimatedRowHeight = 300
     }
     
 }
@@ -64,13 +68,15 @@ extension SaleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
+        } else if section == 1 {
+            return 1
         } else {
             return 30
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,6 +84,9 @@ extension SaleViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             guard let firstSectionCell = tableView.dequeueReusableCell(withIdentifier: SaleFirstSectionCell.identifier) as? SaleFirstSectionCell else {return UITableViewCell()}
             return firstSectionCell
+        } else if indexPath.section == 1 {
+            guard let secondSectionCell = tableView.dequeueReusableCell(withIdentifier: SaleSecondSectionCell.identifier) as? SaleSecondSectionCell else {return UITableViewCell()}
+            return secondSectionCell
         } else {
             guard let dummyCell = tableView.dequeueReusableCell(withIdentifier: SaleDummyTableViewCell.identifier) as? SaleDummyTableViewCell else {return UITableViewCell()}
             return dummyCell
@@ -85,6 +94,11 @@ extension SaleViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 81
+        } else if indexPath.section == 1 {
+            return 390
+        }
         return 81
     }
     

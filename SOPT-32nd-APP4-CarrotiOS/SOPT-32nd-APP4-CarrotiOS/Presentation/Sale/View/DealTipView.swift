@@ -47,37 +47,34 @@ class DealTipView: BaseView {
     override func setLayout() {
         self.addSubviews(backgroundView)
         
-        backgroundView.addSubviews(
-            titleLabel,
-            guideLabel1,
-            guideLabel2,
-            detailButton)
-        
-        self.snp.makeConstraints {
-            $0.height.equalTo(78)
-            $0.width.equalTo(345)
-        }
-        
+        backgroundView.addSubviews(titleLabel,
+                                   guideLabel1,
+                                   guideLabel2,
+                                   detailButton)
+
         backgroundView.snp.makeConstraints {
-            $0.height.equalTo(78)
-            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.height.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(19)
-            $0.leading.equalToSuperview().inset(20.12)
+            $0.top.equalToSuperview().offset(17)
+            $0.leading.equalToSuperview().inset(18)
         }
+        
         guideLabel1.snp.makeConstraints{
             $0.top.equalTo(titleLabel)
-            $0.leading.equalTo(titleLabel.snp.trailing).inset(-6.04)
+            $0.leading.equalTo(titleLabel.snp.trailing).offset(5)
         }
+        
         guideLabel2.snp.makeConstraints{
             $0.top.equalTo(titleLabel.snp.bottom).offset(-3)
             $0.leading.equalTo(titleLabel)
         }
+        
         detailButton.snp.makeConstraints{
             $0.top.equalTo(guideLabel2)
-            $0.leading.equalTo(guideLabel2.snp.trailing).inset(-4.02)
+            $0.leading.equalTo(guideLabel2.snp.trailing).offset(4)
             $0.height.equalTo(22)
         }
     }
