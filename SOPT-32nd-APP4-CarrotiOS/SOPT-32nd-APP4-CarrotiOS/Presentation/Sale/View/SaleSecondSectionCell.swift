@@ -18,10 +18,10 @@ class SaleSecondSectionCell: UITableViewCell {
     // MARK: - UI Components
     
     private let titleLabel = UILabel()
-    private let categoryLabel = UILabel()
+    private let categoryButton = UIButton()
     private let uploadTimeLabel = UILabel()
     private let interestLabel = UILabel()
-    private lazy var categoryTimeStackView = UIStackView(arrangedSubviews: [categoryLabel,
+    private lazy var categoryTimeStackView = UIStackView(arrangedSubviews: [categoryButton,
                                                                             uploadTimeLabel])
     private let contentTextView = UITextView()
     private let reportButton = UIButton()
@@ -47,12 +47,11 @@ class SaleSecondSectionCell: UITableViewCell {
             $0.addLineHeight(lineHeight: 30)
         }
         
-        categoryLabel.do {
-            $0.text = "여성잡화"
-            $0.textColor = Color.carrotGray4
-            $0.font = .body4
-            $0.addLineHeight(lineHeight: 10)
-            $0.underlineText()
+        categoryButton.do {
+            $0.setTitle("여성잡화", for: .normal)
+            $0.setTitleColor(Color.carrotGray4, for: .normal)
+            $0.titleLabel?.font = .body4
+            $0.setUnderline()
         }
         
         uploadTimeLabel.do {
