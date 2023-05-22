@@ -13,6 +13,7 @@
 		0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */; };
 		057A0AC52A189C8800F10B85 /* SaleSecondSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AC42A189C8800F10B85 /* SaleSecondSectionCell.swift */; };
 		057A0ACB2A1BB15A00F10B85 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */; };
+		057A0ACD2A1BB54600F10B85 /* DealTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ACC2A1BB54600F10B85 /* DealTipView.swift */; };
 		C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */; };
 		C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */; };
 		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleFirstSectionCell.swift; sourceTree = "<group>"; };
 		057A0AC42A189C8800F10B85 /* SaleSecondSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleSecondSectionCell.swift; sourceTree = "<group>"; };
 		057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		057A0ACC2A1BB54600F10B85 /* DealTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealTipView.swift; sourceTree = "<group>"; };
 		C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGuideTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				055970782A17FBE400868C42 /* SaleHeaderView.swift */,
 				0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */,
 				057A0AC42A189C8800F10B85 /* SaleSecondSectionCell.swift */,
+				057A0ACC2A1BB54600F10B85 /* DealTipView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */,
 				C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */,
 				DF1841C92A11BD1A001A466A /* AppDelegate.swift in Sources */,
+				057A0ACD2A1BB54600F10B85 /* DealTipView.swift in Sources */,
 				DF18423E2A179E57001A466A /* HomeViewController.swift in Sources */,
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,

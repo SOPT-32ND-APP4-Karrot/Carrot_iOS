@@ -16,15 +16,15 @@ class SaleSecondSectionCell: UITableViewCell {
     static let identifier: String = "SaleSecondSectionCell"
     
     // MARK: - UI Components
-    
     private let titleLabel = UILabel()
     private let categoryButton = UIButton()
     private let uploadTimeLabel = UILabel()
     private let interestLabel = UILabel()
     private lazy var categoryTimeStackView = UIStackView(arrangedSubviews: [categoryButton,
                                                                             uploadTimeLabel])
-    private let contentTextView = UITextView()
+    private let contentLabel = UILabel()
     private let reportButton = UIButton()
+    private let dealTipView = DealTipView()
 
     // MARK: - init
     required init?(coder: NSCoder) {
@@ -38,6 +38,7 @@ class SaleSecondSectionCell: UITableViewCell {
         self.setLayout()
     }
     
+    // MARK: - Functions
     private func setUI() {
         
         titleLabel.do {
@@ -74,8 +75,19 @@ class SaleSecondSectionCell: UITableViewCell {
             $0.addLineHeight(lineHeight: 21)
         }
         
+        contentLabel.do {
+            $0.text = "쿠폰 빼고 드려요\n직거래시 9,000(광흥창역, 광화문역등)\n택배거래시 택배비 발생합니다"
+            $0.font = .body2
+            $0.textColor = .black
+            $0.addLineHeight(lineHeight: 22)
+        }
         
-        
+        reportButton.do {
+            $0.setTitle("이 게시글 신고하기", for: .normal)
+            $0.setTitleColor(Color.carrotGray4, for: .normal)
+            $0.titleLabel?.font = .body4
+            $0.setUnderline()
+        }
     }
     
     private func setLayout() {
