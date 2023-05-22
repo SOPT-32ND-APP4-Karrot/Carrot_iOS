@@ -20,7 +20,6 @@ class SaleDummyTableViewCell: UITableViewCell {
                    reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .white
         self.setLayout()
-        self.skeletonAnimate()
     }
     
     private func setLayout() {
@@ -30,12 +29,6 @@ class SaleDummyTableViewCell: UITableViewCell {
             $0.leading.trailing.equalToSuperview().inset(50)
             $0.height.equalTo(30)
         }
-    }
-    
-    private func skeletonAnimate() {
-        /**
-         Skeleton Animation 구현부
-         */
     }
     
     private func bindText() {
