@@ -21,6 +21,7 @@ extension UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        self.view.endEditing(true)
     }
     
     @objc
@@ -28,6 +29,7 @@ extension UIViewController {
         view.endEditing(true)
     }
     
+    /// 키보드 터치 시 텍스트필드 위로 올라가도록 하는 메서드
     func setKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
@@ -46,10 +48,8 @@ extension UIViewController {
             if let textField = findFirstResponder() as? UITextField, let textFieldSuperview = textField.superview {
                 let textFieldBottom = textFieldSuperview.convert(textField.frame, to: view).maxY
                 let keyboardOverlap = keyboardHeight - (view.bounds.height - textFieldBottom)
-                if keyboardOverlap > 0 {
-                    UIView.animate(withDuration: 1) {
-                        self.view.frame.origin.y -= keyboardHeight - 32
-                    }
+                if keyboardOverlap > 0 && self.view.frame.origin.y == -304.0 {
+                    print(self.view.frame.origin.y)
                     return
                 }
             }
@@ -60,6 +60,7 @@ extension UIViewController {
     }
     
     @objc func keyboardWillHide(_ notification: NSNotification) {
+        print(self.view.frame.origin.y)
         UIView.animate(withDuration: 1) {
             self.view.frame.origin.y = 0
         }
