@@ -21,7 +21,7 @@ final class ChatViewController: UIViewController {
     
     let chatInputView = ChatInputView()
     
-    private lazy var tableView = UITableView(frame: .zero, style: .plain).then {
+    private lazy var chatTableView = UITableView(frame: .zero, style: .plain).then {
         $0.register(ChatGuideTableViewCell.self, forCellReuseIdentifier: ChatGuideTableViewCell.identifier)
         $0.register(ChatReceiveTableViewCell.self, forCellReuseIdentifier: ChatReceiveTableViewCell.identifier)
         $0.register(ChatSendTableViewCell.self, forCellReuseIdentifier: ChatSendTableViewCell.identifier)
@@ -64,7 +64,7 @@ extension ChatViewController {
     
     private func setLayout() {
         view.addSubviews(
-            tableView,
+            chatTableView,
             chatHeader,
             headerView,
             chatInputView
@@ -93,15 +93,52 @@ extension ChatViewController {
             $0.height.equalTo(115)
         }
         
-        tableView.snp.makeConstraints{
+        chatTableView.snp.makeConstraints{
             $0.top.equalTo(chatHeader.snp.bottom)
             $0.width.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(91)
+            $0.bottom.equalTo(self.chatInputView.snp.top)
         }
         
         chatInputView.snp.makeConstraints{
             $0.bottom.equalToSuperview()
             $0.width.equalToSuperview()
+        }
+    }
+    
+    @objc override func keyboardWillShow(_ notification: NSNotification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        
+        let keyboardHeight = keyboardFrame.height
+        let intersection = keyboardFrame.intersection(view.frame)
+        
+        if intersection.height > 0 {
+            if let textField = findFirstResponder() as? UITextField, let textFieldSuperview = textField.superview {
+                let textFieldBottom = textFieldSuperview.convert(textField.frame, to: view).maxY
+                let keyboardOverlap = keyboardHeight - (view.bounds.height - textFieldBottom)
+                if keyboardOverlap > 0 && self.view.frame.origin.y == -304.0 {
+                    print(self.view.frame.origin.y)
+                    return
+                }
+            }
+            
+            UIView.animate(withDuration: 1) {
+                self.chatTableView.frame.origin.y -= keyboardHeight - 32
+                self.chatInputView.frame.origin.y -= keyboardHeight - 32
+//                }
+            }
+        }
+    }
+    
+    @objc override func keyboardWillHide(_ notification: NSNotification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        let keyboardHeight = keyboardFrame.height
+        UIView.animate(withDuration: 1) {
+            self.chatTableView.frame.origin.y += keyboardHeight - 32
+            self.chatInputView.frame.origin.y += keyboardHeight - 32
         }
     }
 }
