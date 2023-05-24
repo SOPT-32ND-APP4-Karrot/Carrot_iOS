@@ -41,6 +41,7 @@ final class ChatViewController: UIViewController {
         $0.setImage(Image.chatPhoneIcon, for: .normal)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +54,7 @@ final class ChatViewController: UIViewController {
 }
 
 extension ChatViewController {
+    
     private func setStyle() {
         view.backgroundColor = .white
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -60,6 +62,7 @@ extension ChatViewController {
     
     private func setDelegate() {
         headerView.handleBackButtonDelegate = self
+//        chatInputView.inputTextField.delegate = self
     }
     
     private func setLayout() {
@@ -92,18 +95,21 @@ extension ChatViewController {
             $0.horizontalEdges.equalTo(self.view.safeAreaLayoutGuide)
             $0.height.equalTo(115)
         }
-        
+
         chatTableView.snp.makeConstraints{
             $0.top.equalTo(chatHeader.snp.bottom)
             $0.width.equalToSuperview()
             $0.bottom.equalTo(self.chatInputView.snp.top)
         }
-        
+
         chatInputView.snp.makeConstraints{
             $0.bottom.equalToSuperview()
             $0.width.equalToSuperview()
         }
     }
+    
+    //TODO: tableView height 조정
+    //TODO: 키보드 탭 시 중복 올라감 이슈..
     
     @objc override func keyboardWillShow(_ notification: NSNotification) {
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
@@ -112,11 +118,16 @@ extension ChatViewController {
         
         let keyboardHeight = keyboardFrame.height
         let intersection = keyboardFrame.intersection(view.frame)
+        let chatTableOrigin = self.chatTableView.frame.origin.y
+        let chatInputOrigin = self.chatInputView.frame.origin.y
+        
+        print(chatTableOrigin, chatInputOrigin)
         
         if intersection.height > 0 {
             if let textField = findFirstResponder() as? UITextField, let textFieldSuperview = textField.superview {
                 let textFieldBottom = textFieldSuperview.convert(textField.frame, to: view).maxY
                 let keyboardOverlap = keyboardHeight - (view.bounds.height - textFieldBottom)
+            print("dfjd")
                 if keyboardOverlap > 0 && self.view.frame.origin.y == -304.0 {
                     print(self.view.frame.origin.y)
                     return
@@ -124,24 +135,53 @@ extension ChatViewController {
             }
             
             UIView.animate(withDuration: 1) {
-                self.chatTableView.frame.origin.y -= keyboardHeight - 32
-                self.chatInputView.frame.origin.y -= keyboardHeight - 32
-//                }
+//                self.chatTableView.frame.origin.y -= keyboardHeight - 32
+//                self.chatInputView.frame.origin.y -= keyboardHeight - 32
+                
+                
+                self.chatTableView.snp.makeConstraints{
+                    $0.top.equalTo(self.chatHeader.snp.bottom)
+                    $0.width.equalToSuperview()
+                    $0.bottom.equalTo(self.chatInputView.snp.top)
+                }
+                
+                self.chatInputView.snp.makeConstraints{
+                    $0.bottom.equalToSuperview().inset(keyboardHeight - 32)
+                    $0.width.equalToSuperview()
+                }
+                print(keyboardHeight - 32)
             }
         }
     }
     
     @objc override func keyboardWillHide(_ notification: NSNotification) {
+        
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
             return
         }
         let keyboardHeight = keyboardFrame.height
         UIView.animate(withDuration: 1) {
-            self.chatTableView.frame.origin.y += keyboardHeight - 32
-            self.chatInputView.frame.origin.y += keyboardHeight - 32
+            
+            self.chatInputView.snp.makeConstraints{
+                $0.bottom.equalToSuperview()
+                $0.width.equalToSuperview()
+            }
+            self.chatTableView.snp.makeConstraints{
+                $0.top.equalTo(self.chatHeader.snp.bottom)
+                $0.width.equalToSuperview()
+                $0.bottom.equalTo(self.chatInputView.snp.top)
+            }
+
         }
     }
 }
+
+//extension ChatViewController: UITextFieldDelegate {
+//    @objc func textFieldDidChange(_ textField: UITextField) {
+//        self.chatTableView.frame.origin.y = 203
+//        self.chatInputView.frame.origin.y = 753
+//    }
+//}
 
 extension ChatViewController: HandleBackButtonDelegate {
     func popView() {
