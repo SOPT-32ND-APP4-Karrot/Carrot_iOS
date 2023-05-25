@@ -176,7 +176,9 @@ extension ChatViewController {
 
                 for i in 0...data.data.chatMessageList.count-1  {
                     self.userIdOrder.append(data.data.chatMessageList[i].writer.userID)
-                    print(self.userIdOrder)
+                    if data.data.chatMessageList[i].hasKeyword == true {
+                        self.userIdOrder.append(0)
+                    }
                 }
                 
                 self.chatHeader.productImageView.kfSetImage(url: self.chat[0].data.sale.saleImgURL)
