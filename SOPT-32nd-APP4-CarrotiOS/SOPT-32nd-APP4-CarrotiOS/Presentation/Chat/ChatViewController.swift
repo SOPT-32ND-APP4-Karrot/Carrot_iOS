@@ -170,7 +170,7 @@ extension ChatViewController {
     
     private func chatData() {
        //TODO: 이전 뷰에서 RoomId 받아옴
-        ChatService.shared.chat(chatRoomId: 2) { response in
+        ChatService.shared.chat(chatRoomId: 1) { response in
             switch response {
             case .success(let data):
                 guard let data = data as? Chat else { return }
