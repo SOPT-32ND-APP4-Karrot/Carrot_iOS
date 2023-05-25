@@ -15,7 +15,7 @@ final class ChatService {
     
     private init() {}
     
-    func weathers(chatRoomId: Int,
+    func chat(chatRoomId: Int,
                 completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let url = Config.baseURL + "/chat/\(chatRoomId)"

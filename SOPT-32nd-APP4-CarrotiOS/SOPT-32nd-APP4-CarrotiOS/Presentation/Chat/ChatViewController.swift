@@ -12,6 +12,8 @@ import Then
 
 final class ChatViewController: UIViewController {
     
+    var chat: [Chat] = []
+    
     var dummy: [Int] = [1, 2, 1, 0, 2, 1, 2, 1, 1]
     
     //MARK: Components
@@ -50,6 +52,7 @@ final class ChatViewController: UIViewController {
         setLayout()
         setKeyboardObserver()
         hideKeyboardWhenTappedAround()
+        chatData()
     }
 }
 
@@ -156,6 +159,23 @@ extension ChatViewController {
         
         let newTableViewHeight = self.view.bounds.height - headerView.frame.height - chatHeader.frame.height - chatInputView.frame.height - 32
         chatTableView.frame.size.height = newTableViewHeight
+    }
+    
+    
+    private func chatData() {
+//        chat.forEach {
+            ChatService.shared.chat(chatRoomId: 1) { response in
+                switch response {
+                case .success(let data):
+                    guard let data = data as? Chat else { return }
+//                    print(self.cityWeathers)
+//                    self.cityWeathers.append(data)
+                    dump(data)
+                default:
+                    return
+                }
+            }
+//        }
     }
 }
 
