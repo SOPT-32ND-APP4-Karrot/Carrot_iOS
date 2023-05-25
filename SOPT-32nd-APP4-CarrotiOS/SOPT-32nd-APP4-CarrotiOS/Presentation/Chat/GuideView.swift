@@ -23,7 +23,7 @@ class GuideView: BaseView {
         $0.textColor = Color.carrotBlue
     }
     
-    private let guideLabel1 = UILabel().then {
+    lazy var guideLabel1 = UILabel().then {
         $0.font = .body5
         $0.setTextWithLineHeight(text: "마포아씨님과 거래 예약을 했어요. 당근페이에 가", lineHeight: 22)
         $0.textColor = Color.carrotBlue

@@ -221,6 +221,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         switch userIdOrder[indexPath.row] {
         case 0:
             guard let guideCell = tableView.dequeueReusableCell(withIdentifier: ChatGuideTableViewCell.identifier, for: indexPath) as? ChatGuideTableViewCell else { return UITableViewCell() }
+            guideCell.guideView.guideLabel1.text = String(self.chat[0].data.seller.nickname) + "님과 거래 예약을 했어요. 당근페이에 가"
             guideCell.selectionStyle = .none
             return guideCell
         case 1:
