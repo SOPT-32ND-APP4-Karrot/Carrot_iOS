@@ -1,5 +1,5 @@
 //
-//  HomeHeaderView.swift
+//  HomeNavigationView.swift
 //  SOPT-32nd-APP4-CarrotiOS
 //
 //  Created by kyun on 2023/05/19.
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class HomeHeaderView: UIView {
+final class HomeNavigationView: UIView {
     
     private let dongLabel = UILabel()
     private let listButton = UIButton()
@@ -32,7 +32,7 @@ class HomeHeaderView: UIView {
     }
 }
 
-private extension HomeHeaderView {
+extension HomeNavigationView {
     
     private func setUI() {
         

@@ -53,10 +53,13 @@
 		DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842332A120CB0001A466A /* BaseViewController.swift */; };
 		DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842352A1268F6001A466A /* UIViewController+.swift */; };
 		DF1842382A127550001A466A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842372A127550001A466A /* BaseView.swift */; };
-		DF18423A2A178028001A466A /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842392A178028001A466A /* HomeHeaderView.swift */; };
+		DF18423A2A178028001A466A /* HomeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842392A178028001A466A /* HomeNavigationView.swift */; };
 		DF18423C2A1795BE001A466A /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18423B2A1795BE001A466A /* UIStackView+.swift */; };
 		DF18423E2A179E57001A466A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18423D2A179E57001A466A /* HomeViewController.swift */; };
 		DF4702522A189FC000A71214 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702512A189FC000A71214 /* HomeDataModel.swift */; };
+		DF47025A2A1F4D3C00A71214 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702592A1F4D3C00A71214 /* CarrotTableViewCell.swift */; };
+		DF47025C2A1F70EE00A71214 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47025B2A1F70EE00A71214 /* UITableView+.swift */; };
+		DF47025E2A1F713300A71214 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47025D2A1F713300A71214 /* NSObject+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,10 +107,13 @@
 		DF1842332A120CB0001A466A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DF1842352A1268F6001A466A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		DF1842372A127550001A466A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		DF1842392A178028001A466A /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		DF1842392A178028001A466A /* HomeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationView.swift; sourceTree = "<group>"; };
 		DF18423B2A1795BE001A466A /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		DF18423D2A179E57001A466A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DF4702512A189FC000A71214 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
+		DF4702592A1F4D3C00A71214 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
+		DF47025B2A1F70EE00A71214 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		DF47025D2A1F713300A71214 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +290,8 @@
 				C3FFFB2D2A135E4A00FACA8E /* UILabel+.swift */,
 				DF18423B2A1795BE001A466A /* UIStackView+.swift */,
 				057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */,
+				DF47025B2A1F70EE00A71214 /* UITableView+.swift */,
+				DF47025D2A1F713300A71214 /* NSObject+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,8 +331,9 @@
 		DF1841EA2A11C2A3001A466A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DF1842392A178028001A466A /* HomeHeaderView.swift */,
+				DF1842392A178028001A466A /* HomeNavigationView.swift */,
 				DF18423D2A179E57001A466A /* HomeViewController.swift */,
+				DF4702592A1F4D3C00A71214 /* CarrotTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -500,6 +509,8 @@
 				057A0ACD2A1BB54600F10B85 /* DealTipView.swift in Sources */,
 				DF18423E2A179E57001A466A /* HomeViewController.swift in Sources */,
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
+				DF47025A2A1F4D3C00A71214 /* CarrotTableViewCell.swift in Sources */,
+				DF47025C2A1F70EE00A71214 /* UITableView+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
 				DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */,
 				055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */,
@@ -508,11 +519,12 @@
 				DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */,
 				0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */,
 				DF1842382A127550001A466A /* BaseView.swift in Sources */,
-				DF18423A2A178028001A466A /* HomeHeaderView.swift in Sources */,
+				DF18423A2A178028001A466A /* HomeNavigationView.swift in Sources */,
 				055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */,
 				C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */,
 				DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */,
 				DF1841F82A11C405001A466A /* Color.swift in Sources */,
+				DF47025E2A1F713300A71214 /* NSObject+.swift in Sources */,
 				DF1842122A11C46D001A466A /* o.swift in Sources */,
 				DF1842302A120B55001A466A /* Int+.swift in Sources */,
 				DF4702522A189FC000A71214 /* HomeDataModel.swift in Sources */,
