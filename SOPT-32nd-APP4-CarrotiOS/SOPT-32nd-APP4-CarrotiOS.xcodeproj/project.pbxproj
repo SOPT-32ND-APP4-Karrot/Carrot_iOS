@@ -23,6 +23,7 @@
 		C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */; };
 		C312AB112A1FA58000DA32EE /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB102A1FA58000DA32EE /* Chat.swift */; };
 		C312AB132A1FA7B600DA32EE /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB122A1FA7B600DA32EE /* ChatService.swift */; };
+		C312AB152A1FB64600DA32EE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB142A1FB64600DA32EE /* UIImageView+.swift */; };
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
@@ -80,6 +81,7 @@
 		C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		C312AB102A1FA58000DA32EE /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C312AB122A1FA7B600DA32EE /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		C312AB142A1FB64600DA32EE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				DF18423B2A1795BE001A466A /* UIStackView+.swift */,
 				C30F6D2C2A189EE9003A119E /* UITextField+.swift */,
 				057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */,
+				C312AB142A1FB64600DA32EE /* UIImageView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
 				C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
+				C312AB152A1FB64600DA32EE /* UIImageView+.swift in Sources */,
 				DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */,
 				055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */,
 				DF1842062A11C445001A466A /* i.swift in Sources */,
