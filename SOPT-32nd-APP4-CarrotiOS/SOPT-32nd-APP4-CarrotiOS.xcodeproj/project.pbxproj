@@ -21,6 +21,7 @@
 		C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D2C2A189EE9003A119E /* UITextField+.swift */; };
 		C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0C2A1FA39100DA32EE /* Config.swift */; };
 		C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */; };
+		C312AB112A1FA58000DA32EE /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB102A1FA58000DA32EE /* Chat.swift */; };
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
@@ -41,7 +42,6 @@
 		DF18420A2A11C451001A466A /* k.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842092A11C451001A466A /* k.swift */; };
 		DF18420C2A11C457001A466A /* l.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420B2A11C457001A466A /* l.swift */; };
 		DF18420E2A11C45D001A466A /* m.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420D2A11C45D001A466A /* m.swift */; };
-		DF1842102A11C463001A466A /* n.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420F2A11C463001A466A /* n.swift */; };
 		DF1842122A11C46D001A466A /* o.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842112A11C46D001A466A /* o.swift */; };
 		DF1842152A11C61A001A466A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DF1842142A11C61A001A466A /* Kingfisher */; };
 		DF1842182A11C66E001A466A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF1842172A11C66E001A466A /* Alamofire */; };
@@ -78,6 +78,7 @@
 		C30F6D2C2A189EE9003A119E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		C312AB0C2A1FA39100DA32EE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		C312AB102A1FA58000DA32EE /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		DF1842092A11C451001A466A /* k.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = k.swift; sourceTree = "<group>"; };
 		DF18420B2A11C457001A466A /* l.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = l.swift; sourceTree = "<group>"; };
 		DF18420D2A11C45D001A466A /* m.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m.swift; sourceTree = "<group>"; };
-		DF18420F2A11C463001A466A /* n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n.swift; sourceTree = "<group>"; };
 		DF1842112A11C46D001A466A /* o.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = o.swift; sourceTree = "<group>"; };
 		DF18421F2A11CAAB001A466A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		DF1842212A11F5A1001A466A /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -394,7 +394,7 @@
 		DF1841F22A11C2D1001A466A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				DF18420F2A11C463001A466A /* n.swift */,
+				C312AB102A1FA58000DA32EE /* Chat.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -519,6 +519,7 @@
 				055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */,
 				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
+				C312AB112A1FA58000DA32EE /* Chat.swift in Sources */,
 				DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */,
 				C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */,
 				0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */,
@@ -537,7 +538,6 @@
 				DF1842022A11C433001A466A /* g.swift in Sources */,
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
-				DF1842102A11C463001A466A /* n.swift in Sources */,
 				C30F6D2B2A189BB5003A119E /* ChatInputView.swift in Sources */,
 				057A0AC52A189C8800F10B85 /* SaleSecondSectionCell.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
