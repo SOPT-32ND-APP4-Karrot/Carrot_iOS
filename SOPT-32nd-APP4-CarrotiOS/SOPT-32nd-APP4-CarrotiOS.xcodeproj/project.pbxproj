@@ -24,6 +24,7 @@
 		C312AB112A1FA58000DA32EE /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB102A1FA58000DA32EE /* Chat.swift */; };
 		C312AB132A1FA7B600DA32EE /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB122A1FA7B600DA32EE /* ChatService.swift */; };
 		C312AB152A1FB64600DA32EE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB142A1FB64600DA32EE /* UIImageView+.swift */; };
+		C312AB172A1FDD8500DA32EE /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB162A1FDD8500DA32EE /* String+.swift */; };
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
@@ -82,6 +83,7 @@
 		C312AB102A1FA58000DA32EE /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C312AB122A1FA7B600DA32EE /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		C312AB142A1FB64600DA32EE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		C312AB162A1FDD8500DA32EE /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				C30F6D2C2A189EE9003A119E /* UITextField+.swift */,
 				057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */,
 				C312AB142A1FB64600DA32EE /* UIImageView+.swift */,
+				C312AB162A1FDD8500DA32EE /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				DF1842022A11C433001A466A /* g.swift in Sources */,
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
+				C312AB172A1FDD8500DA32EE /* String+.swift in Sources */,
 				C30F6D2B2A189BB5003A119E /* ChatInputView.swift in Sources */,
 				057A0AC52A189C8800F10B85 /* SaleSecondSectionCell.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
