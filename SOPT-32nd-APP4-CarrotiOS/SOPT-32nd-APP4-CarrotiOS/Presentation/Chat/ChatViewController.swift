@@ -14,7 +14,11 @@ final class ChatViewController: UIViewController {
     
     var chat: [Chat] = []
     
-    var dummy: [Int] = [1, 2, 1, 0, 2, 1, 2, 1, 1]
+    var userIdOrder: [Int] = [] {
+        didSet {
+            self.chatTableView.reloadData()
+        }
+    }
     
     //MARK: Components
     let headerView = HeaderView()
@@ -33,7 +37,7 @@ final class ChatViewController: UIViewController {
         $0.separatorStyle = .none
     }
     
-    private let headerViewTitle = UILabel().then {
+    lazy var headerViewTitle = UILabel().then {
         $0.font = .title
         $0.addLineHeight(lineHeight: 28)
         $0.text = "마포아씨"
@@ -168,17 +172,23 @@ extension ChatViewController {
                 guard let data = data as? Chat else { return }
                 dump(data)
                 self.chat.append(data)
+                print(self.chat)
+
+                for i in 0...data.data.chatMessageList.count-1  {
+                    self.userIdOrder.append(data.data.chatMessageList[i].writer.userID)
+                    print(self.userIdOrder)
+                }
                 
                 self.chatHeader.productImageView.kfSetImage(url: self.chat[0].data.sale.saleImgURL)
                 self.chatHeader.statusLabel.text = String(self.chat[0].data.sale.status)
                 self.chatHeader.productLabel.text = String(self.chat[0].data.sale.title)
                 self.chatHeader.priceLabel.text = String(self.chat[0].data.sale.price.priceText)
                 self.chatHeader.proposalLabel.text = self.chat[0].data.sale.isSuggest ? "" : "(가격제안불가)"
+                self.headerViewTitle.text = String(self.chat[0].data.seller.nickname)
             default:
                 return
             }
         }
-        
     }
 }
 
@@ -190,23 +200,25 @@ extension ChatViewController: HandleBackButtonDelegate {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummy.count
+//        return self.chat[0].data.chatMessageList.count
+        return userIdOrder.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch dummy[indexPath.row] {
+//        switch self.chat[0].data.chatMessageList[indexPath.row].writer.userID {
+        switch userIdOrder[indexPath.row] {
         case 0:
             guard let guideCell = tableView.dequeueReusableCell(withIdentifier: ChatGuideTableViewCell.identifier, for: indexPath) as? ChatGuideTableViewCell else { return UITableViewCell() }
             guideCell.selectionStyle = .none
             return guideCell
         case 1:
-            guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
-            receiveCell.selectionStyle = .none
-            return receiveCell
-        case 2:
             guard let sendCell = tableView.dequeueReusableCell(withIdentifier: ChatSendTableViewCell.identifier, for: indexPath) as? ChatSendTableViewCell else { return UITableViewCell() }
             sendCell.selectionStyle = .none
             return sendCell
+        case 2:
+            guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
+            receiveCell.selectionStyle = .none
+            return receiveCell
         default:
             return UITableViewCell()
         }
@@ -214,13 +226,13 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        switch dummy[indexPath.row] {
+        switch userIdOrder[indexPath.row] {
         case 0:
             return 90
         case 1:
-            return 75
-        case 2:
             return 50
+        case 2:
+            return 75
         default:
             return 50
         }
