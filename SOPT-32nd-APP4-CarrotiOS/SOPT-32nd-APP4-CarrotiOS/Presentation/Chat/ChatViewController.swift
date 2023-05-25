@@ -169,7 +169,7 @@ extension ChatViewController {
                 dump(data)
                 self.chat.append(data)
                 
-//                self.chatHeader.productImageView.image =
+                self.chatHeader.productImageView.kfSetImage(url: self.chat[0].data.sale.saleImgURL)
                 self.chatHeader.statusLabel.text = String(self.chat[0].data.sale.status)
                 self.chatHeader.productLabel.text = String(self.chat[0].data.sale.title)
                 self.chatHeader.priceLabel.text = String(self.chat[0].data.sale.price.priceText)
