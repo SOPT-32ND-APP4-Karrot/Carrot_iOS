@@ -26,6 +26,7 @@ final class ChatInputView: BaseView {
         $0.font = .body2
         $0.addLeftPadding(12)
         $0.addRightPadding(39)
+        $0.tintColor = Color.carrotOrange
     }
     
     let emojiButton = UIButton().then {
