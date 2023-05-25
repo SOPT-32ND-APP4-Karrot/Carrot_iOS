@@ -178,15 +178,16 @@ extension ChatViewController {
                 self.chat.append(data)
                 print(self.chat)
 
-                for i in 0...data.data.chatMessageList.count-1  {
-                    self.userIdOrder.append(data.data.chatMessageList[i].writer.userID)
-                    self.chatContentOrder.append(data.data.chatMessageList[i].content)
-                    if data.data.chatMessageList[i].hasKeyword == true {
-                        self.userIdOrder.append(0)
-                        self.chatContentOrder.append("안내")
+                if data.data.chatMessageList.count != 0 {
+                    for i in 0...data.data.chatMessageList.count-1  {
+                        self.userIdOrder.append(data.data.chatMessageList[i].writer.userID)
+                        self.chatContentOrder.append(data.data.chatMessageList[i].content)
+                        if data.data.chatMessageList[i].hasKeyword == true {
+                            self.userIdOrder.append(0)
+                            self.chatContentOrder.append("안내")
+                        }
                     }
                 }
-//                print(self.userIdOrder)
                 
                 self.chatHeader.productImageView.kfSetImage(url: self.chat[0].data.sale.saleImgURL)
                 self.chatHeader.statusLabel.text = String(self.chat[0].data.sale.status)
@@ -224,13 +225,11 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             //TODO: date 입히기
             sendCell.selectionStyle = .none
             return sendCell
-        case 2:
+        default:
             guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
             receiveCell.receiveView.receiveLabel.text = self.chatContentOrder[indexPath.row]
             receiveCell.selectionStyle = .none
             return receiveCell
-        default:
-            return UITableViewCell()
         }
 
     }
@@ -245,7 +244,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         case 2:
             return 75
         default:
-            return 50
+            return 75
         }
     }
 }
