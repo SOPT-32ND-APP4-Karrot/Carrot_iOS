@@ -16,7 +16,7 @@ final class ChatInputView: BaseView {
         $0.setImage(Image.chatAddIcon, for: .normal)
     }
     
-    let inputTextField = UITextField().then {
+    lazy var inputTextField = UITextField().then {
         $0.placeholder = "메시지 보내기"
         $0.setPlaceholderColor(Color.carrotGray3!)
         $0.layer.cornerRadius = 21
@@ -27,13 +27,14 @@ final class ChatInputView: BaseView {
         $0.addLeftPadding(12)
         $0.addRightPadding(39)
         $0.tintColor = Color.carrotOrange
+        $0.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
     let emojiButton = UIButton().then {
         $0.setImage(Image.chatEmojiIcon, for: .normal)
     }
     
-    let sendButton = UIButton().then {
+    lazy var sendButton = UIButton().then {
         $0.setImage(Image.chatSendIcon, for: .normal)
     }
     
@@ -72,7 +73,18 @@ final class ChatInputView: BaseView {
             $0.top.equalTo(plusButton)
             $0.trailing.equalToSuperview().inset(11.53)
         }
-        
     }
+}
 
+extension ChatInputView: UITextFieldDelegate {
+
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        // 키보드 업데이트 시 원하는 기능
+        if inputTextField.hasText {
+            sendButton.setImage(Image.chatSendIconOrange, for: .normal)
+            print("ad")
+        } else {
+            sendButton.setImage(Image.chatSendIcon, for: .normal)
+        }
+    }
 }
