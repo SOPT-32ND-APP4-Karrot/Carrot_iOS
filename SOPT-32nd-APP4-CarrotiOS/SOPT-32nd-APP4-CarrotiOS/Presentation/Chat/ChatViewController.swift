@@ -21,7 +21,7 @@ final class ChatViewController: UIViewController {
     }
     
     var chatContentOrder : [String] = []
-//    var chatTimeOrder: [Date] = []
+    var chatTimeOrder: [String] = []
     
     //MARK: Components
     let headerView = HeaderView()
@@ -182,10 +182,14 @@ extension ChatViewController {
                     for i in 0...data.data.chatMessageList.count-1  {
                         self.userIdOrder.append(data.data.chatMessageList[i].writer.userID)
                         self.chatContentOrder.append(data.data.chatMessageList[i].content)
+                        self.chatTimeOrder.append(data.data.chatMessageList[i].time)
+                        
                         if data.data.chatMessageList[i].hasKeyword == true {
                             self.userIdOrder.append(0)
                             self.chatContentOrder.append("안내")
+                            self.chatTimeOrder.append("0")
                         }
+                        print(self.chatTimeOrder)
                     }
                 }
                 
@@ -222,12 +226,13 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             guard let sendCell = tableView.dequeueReusableCell(withIdentifier: ChatSendTableViewCell.identifier, for: indexPath) as? ChatSendTableViewCell else { return UITableViewCell() }
             sendCell.sendView.receiveLabel.text = self.chatContentOrder[indexPath.row]
-            //TODO: date 입히기
+            sendCell.sendView.timeLabel.text = self.chatTimeOrder[indexPath.row].toTime
             sendCell.selectionStyle = .none
             return sendCell
         default:
             guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
             receiveCell.receiveView.receiveLabel.text = self.chatContentOrder[indexPath.row]
+            receiveCell.receiveView.timeLabel.text = self.chatTimeOrder[indexPath.row].toTime
             receiveCell.selectionStyle = .none
             return receiveCell
         }
@@ -241,8 +246,6 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             return 90
         case 1:
             return 50
-        case 2:
-            return 75
         default:
             return 75
         }
