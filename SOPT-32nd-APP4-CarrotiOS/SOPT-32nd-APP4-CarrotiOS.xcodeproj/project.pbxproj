@@ -19,6 +19,8 @@
 		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
 		C30F6D2B2A189BB5003A119E /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D2A2A189BB5003A119E /* ChatInputView.swift */; };
 		C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D2C2A189EE9003A119E /* UITextField+.swift */; };
+		C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0C2A1FA39100DA32EE /* Config.swift */; };
+		C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */; };
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
@@ -74,6 +76,8 @@
 		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D2A2A189BB5003A119E /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
 		C30F6D2C2A189EE9003A119E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		C312AB0C2A1FA39100DA32EE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 				DF1841EE2A11C2B8001A466A /* Sale */,
 				DF1841ED2A11C2B3001A466A /* Chat */,
 				DF1841EC2A11C2AD001A466A /* Review */,
+				C312AB0C2A1FA39100DA32EE /* Config.swift */,
+				C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */,
 				C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */,
 				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
 				DF1842082A11C44A001A466A /* j.swift in Sources */,
@@ -513,6 +520,7 @@
 				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
 				DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */,
+				C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */,
 				0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */,
 				DF1842382A127550001A466A /* BaseView.swift in Sources */,
 				DF18423A2A178028001A466A /* HomeHeaderView.swift in Sources */,
@@ -673,6 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://43.201.111.24:8080";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q827V73L8U;
@@ -701,6 +710,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://43.201.111.24:8080";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q827V73L8U;
