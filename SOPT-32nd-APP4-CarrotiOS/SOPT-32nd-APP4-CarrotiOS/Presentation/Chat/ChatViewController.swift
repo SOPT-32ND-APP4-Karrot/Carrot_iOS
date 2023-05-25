@@ -20,6 +20,9 @@ final class ChatViewController: UIViewController {
         }
     }
     
+    var chatContentOrder : [String] = []
+//    var chatTimeOrder: [Date] = []
+    
     //MARK: Components
     let headerView = HeaderView()
     
@@ -166,6 +169,7 @@ extension ChatViewController {
     
     
     private func chatData() {
+       //TODO: 이전 뷰에서 RoomId 받아옴
         ChatService.shared.chat(chatRoomId: 1) { response in
             switch response {
             case .success(let data):
@@ -176,10 +180,13 @@ extension ChatViewController {
 
                 for i in 0...data.data.chatMessageList.count-1  {
                     self.userIdOrder.append(data.data.chatMessageList[i].writer.userID)
+                    self.chatContentOrder.append(data.data.chatMessageList[i].content)
                     if data.data.chatMessageList[i].hasKeyword == true {
                         self.userIdOrder.append(0)
+                        self.chatContentOrder.append("안내")
                     }
                 }
+//                print(self.userIdOrder)
                 
                 self.chatHeader.productImageView.kfSetImage(url: self.chat[0].data.sale.saleImgURL)
                 self.chatHeader.statusLabel.text = String(self.chat[0].data.sale.status)
@@ -202,12 +209,10 @@ extension ChatViewController: HandleBackButtonDelegate {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.chat[0].data.chatMessageList.count
         return userIdOrder.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        switch self.chat[0].data.chatMessageList[indexPath.row].writer.userID {
         switch userIdOrder[indexPath.row] {
         case 0:
             guard let guideCell = tableView.dequeueReusableCell(withIdentifier: ChatGuideTableViewCell.identifier, for: indexPath) as? ChatGuideTableViewCell else { return UITableViewCell() }
@@ -215,15 +220,19 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             return guideCell
         case 1:
             guard let sendCell = tableView.dequeueReusableCell(withIdentifier: ChatSendTableViewCell.identifier, for: indexPath) as? ChatSendTableViewCell else { return UITableViewCell() }
+            sendCell.sendView.receiveLabel.text = self.chatContentOrder[indexPath.row]
+            //TODO: date 입히기
             sendCell.selectionStyle = .none
             return sendCell
         case 2:
             guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
+            receiveCell.receiveView.receiveLabel.text = self.chatContentOrder[indexPath.row]
             receiveCell.selectionStyle = .none
             return receiveCell
         default:
             return UITableViewCell()
         }
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
