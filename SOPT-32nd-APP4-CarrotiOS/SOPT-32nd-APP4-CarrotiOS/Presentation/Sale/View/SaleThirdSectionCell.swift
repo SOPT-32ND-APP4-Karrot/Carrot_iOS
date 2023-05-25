@@ -70,7 +70,10 @@ class SaleThirdSectionCell: UITableViewCell {
             $0.font = .detail1
             $0.textColor = Color.carrotBlue
             $0.backgroundColor = Color.carrotLightSkyBlue
+            $0.clipsToBounds = true
             $0.layer.cornerRadius = 2
+            $0.textAlignment = .center
+            
         }
         
         shopNameLabel.do {
@@ -92,7 +95,7 @@ class SaleThirdSectionCell: UITableViewCell {
         }
         
         buyNewLabel.do {
-            $0.text = "새  상품  구매하기"
+            $0.text = "새 상품 구매하기"
             $0.font = .body4
             $0.textColor = Color.carrotGray4
             $0.addLineHeight(lineHeight: 21)
@@ -102,6 +105,10 @@ class SaleThirdSectionCell: UITableViewCell {
             $0.axis = .horizontal
             $0.spacing = 4
             $0.alignment = .center
+        }
+        
+        buyNewButton.do {
+            $0.setImage(Image.saleNewProductIcon, for: .normal)
         }
         
         buyNewStackView.do {
@@ -135,7 +142,7 @@ class SaleThirdSectionCell: UITableViewCell {
         productNameLabel.snp.makeConstraints {
             $0.top.equalTo(productImageView)
             $0.leading.equalTo(productImageView.snp.trailing).offset(17)
-            $0.trailing.equalTo(optionButton.snp.trailing)
+            $0.trailing.equalTo(optionButton.snp.leading)
         }
         
         adLabel.snp.makeConstraints {
