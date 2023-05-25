@@ -17,6 +17,10 @@
 		C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */; };
 		C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */; };
 		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
+		C30F6D2B2A189BB5003A119E /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D2A2A189BB5003A119E /* ChatInputView.swift */; };
+		C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D2C2A189EE9003A119E /* UITextField+.swift */; };
+		C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0C2A1FA39100DA32EE /* Config.swift */; };
+		C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */; };
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
@@ -73,6 +77,10 @@
 		C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGuideTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
+		C30F6D2A2A189BB5003A119E /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
+		C30F6D2C2A189EE9003A119E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		C312AB0C2A1FA39100DA32EE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
@@ -245,6 +253,8 @@
 				DF1841EE2A11C2B8001A466A /* Sale */,
 				DF1841ED2A11C2B3001A466A /* Chat */,
 				DF1841EC2A11C2AD001A466A /* Review */,
+				C312AB0C2A1FA39100DA32EE /* Config.swift */,
+				C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -289,6 +299,7 @@
 				DF1842352A1268F6001A466A /* UIViewController+.swift */,
 				C3FFFB2D2A135E4A00FACA8E /* UILabel+.swift */,
 				DF18423B2A1795BE001A466A /* UIStackView+.swift */,
+				C30F6D2C2A189EE9003A119E /* UITextField+.swift */,
 				057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */,
 				DF47025B2A1F70EE00A71214 /* UITableView+.swift */,
 				DF47025D2A1F713300A71214 /* NSObject+.swift */,
@@ -315,6 +326,7 @@
 				C36D9F9D2A174169006B155F /* GuideView.swift */,
 				C32525242A17541A002629E0 /* ReceiveView.swift */,
 				C32525262A176201002629E0 /* SendView.swift */,
+				C30F6D2A2A189BB5003A119E /* ChatInputView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -499,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */,
 				C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */,
 				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
 				DF1842082A11C44A001A466A /* j.swift in Sources */,
@@ -511,12 +524,14 @@
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
 				DF47025A2A1F4D3C00A71214 /* CarrotTableViewCell.swift in Sources */,
 				DF47025C2A1F70EE00A71214 /* UITableView+.swift in Sources */,
+				C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
 				DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */,
 				055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */,
 				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
 				DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */,
+				C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */,
 				0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */,
 				DF1842382A127550001A466A /* BaseView.swift in Sources */,
 				DF18423A2A178028001A466A /* HomeNavigationView.swift in Sources */,
@@ -535,6 +550,7 @@
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
 				DF1842102A11C463001A466A /* n.swift in Sources */,
+				C30F6D2B2A189BB5003A119E /* ChatInputView.swift in Sources */,
 				057A0AC52A189C8800F10B85 /* SaleSecondSectionCell.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
 				C32525252A17541A002629E0 /* ReceiveView.swift in Sources */,
@@ -677,9 +693,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://43.201.111.24:8080";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8MTU4Q38X7;
+				DEVELOPMENT_TEAM = Q827V73L8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SOPT-32nd-APP4-CarrotiOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -705,9 +722,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://43.201.111.24:8080";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8MTU4Q38X7;
+				DEVELOPMENT_TEAM = Q827V73L8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SOPT-32nd-APP4-CarrotiOS/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
