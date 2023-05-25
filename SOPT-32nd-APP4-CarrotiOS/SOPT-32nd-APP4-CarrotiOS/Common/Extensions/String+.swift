@@ -9,15 +9,20 @@ import Foundation
 
 extension String {
     
-    func toTime(dateStr: String) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.M.dd a h:mm:ss" // 2020-08-13 16:30
-        
-        let convertDate = dateFormatter.date(from: dateStr) // Date 타입으로 변환
-        
-        let myDateFormatter = DateFormatter()
-        myDateFormatter.dateFormat = "a hh시 mm분" // 2020년 08월 13일 오후 04시 30분
-        myDateFormatter.locale = Locale(identifier:"ko_KR") // PM, AM을 언어에 맞게 setting (ex: PM -> 오후)
-        let convertStr = myDateFormatter.string(from: convertDate!)
+    var toTime: String {
+        get {
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "yyyy. M. dd. a h:mm:ss"
+
+            let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "a hh:mm"
+            dateFormatterPrint.locale = Locale(identifier: "ko")
+
+            if let date = dateFormatterGet.date(from: self) {
+                return dateFormatterPrint.string(from: date as Date)
+            } else {
+               return self
+            }
+        }
     }
 }
