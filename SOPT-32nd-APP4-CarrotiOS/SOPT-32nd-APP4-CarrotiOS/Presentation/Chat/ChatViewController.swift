@@ -65,7 +65,6 @@ extension ChatViewController {
     
     private func setDelegate() {
         headerView.handleBackButtonDelegate = self
-        //        chatInputView.inputTextField.delegate = self
     }
     
     private func setLayout() {
@@ -131,16 +130,16 @@ extension ChatViewController {
             let newTableViewHeight = self.view.bounds.height - headerView.frame.height - chatHeader.frame.height - chatInputView.frame.height - keyboardHeight
             chatTableView.frame.size.height = newTableViewHeight
             
-                self.chatTableView.snp.makeConstraints{
-                    $0.top.equalTo(self.chatHeader.snp.bottom)
-                    $0.width.equalToSuperview()
-                    $0.bottom.equalTo(self.chatInputView.snp.top)
-                }
-                
-                self.chatInputView.snp.makeConstraints{
-                    $0.bottom.equalToSuperview().inset(keyboardHeight - 32)
-                    $0.width.equalToSuperview()
-                }
+            self.chatTableView.snp.makeConstraints{
+                $0.top.equalTo(self.chatHeader.snp.bottom)
+                $0.width.equalToSuperview()
+                $0.bottom.equalTo(self.chatInputView.snp.top)
+            }
+            
+            self.chatInputView.snp.makeConstraints{
+                $0.bottom.equalToSuperview().inset(keyboardHeight - 32)
+                $0.width.equalToSuperview()
+            }
         }
     }
     
@@ -163,19 +162,23 @@ extension ChatViewController {
     
     
     private func chatData() {
-//        chat.forEach {
-            ChatService.shared.chat(chatRoomId: 1) { response in
-                switch response {
-                case .success(let data):
-                    guard let data = data as? Chat else { return }
-//                    print(self.cityWeathers)
-//                    self.cityWeathers.append(data)
-                    dump(data)
-                default:
-                    return
-                }
+        ChatService.shared.chat(chatRoomId: 1) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? Chat else { return }
+                dump(data)
+                self.chat.append(data)
+                
+//                self.chatHeader.productImageView.image =
+                self.chatHeader.statusLabel.text = String(self.chat[0].data.sale.status)
+                self.chatHeader.productLabel.text = String(self.chat[0].data.sale.title)
+                self.chatHeader.priceLabel.text = String(self.chat[0].data.sale.price.priceText)
+                self.chatHeader.proposalLabel.text = self.chat[0].data.sale.isSuggest ? "" : "(가격제안불가)"
+            default:
+                return
             }
-//        }
+        }
+        
     }
 }
 
