@@ -14,10 +14,14 @@ final class ReviewViewController: UIViewController {
     
     let headerView = HeaderView()
     
+    let scrollView = UIScrollView()
+    
+    let reviewView = ReviewView()
+    
     lazy var headerViewTitle = UILabel().then {
         $0.font = .title
         $0.addLineHeight(lineHeight: 28)
-        $0.text = "거래후기"
+        $0.text = "거래 후기"
     }
     
     override func viewDidLoad() {
@@ -30,16 +34,24 @@ final class ReviewViewController: UIViewController {
 }
 
 extension ReviewViewController {
+    
     private func setStyle() {
         view.backgroundColor = .white
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    private func setDelegate() {
+        headerView.handleBackButtonDelegate = self
+    }
+    
     private func setLayout() {
         view.addSubviews(
-            headerView
+            headerView,
+            scrollView
         )
+        
         headerView.addSubviews(headerViewTitle)
+        scrollView.addSubview(reviewView)
         
         headerView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(44)
@@ -51,10 +63,16 @@ extension ReviewViewController {
             $0.centerY.equalToSuperview()
             $0.centerX.equalToSuperview()
         }
-    }
-    
-    private func setDelegate() {
-        headerView.handleBackButtonDelegate = self
+        
+        scrollView.snp.makeConstraints{
+            $0.top.equalTo(headerView.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        reviewView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        
+        }
     }
 }
 

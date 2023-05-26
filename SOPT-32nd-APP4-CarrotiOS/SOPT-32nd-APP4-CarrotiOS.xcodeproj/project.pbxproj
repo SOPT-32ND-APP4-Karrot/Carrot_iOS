@@ -30,6 +30,7 @@
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
 		C3D71D732A208075006222A4 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D71D722A208075006222A4 /* ReviewViewController.swift */; };
+		C3D71D752A208A3B006222A4 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D71D742A208A3B006222A4 /* ReviewView.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -90,6 +91,7 @@
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		C3D71D722A208075006222A4 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		C3D71D742A208A3B006222A4 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				C3D71D722A208075006222A4 /* ReviewViewController.swift */,
+				C3D71D742A208A3B006222A4 /* ReviewView.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				DF1842122A11C46D001A466A /* o.swift in Sources */,
 				DF18420C2A11C457001A466A /* l.swift in Sources */,
 				DF1842302A120B55001A466A /* Int+.swift in Sources */,
+				C3D71D752A208A3B006222A4 /* ReviewView.swift in Sources */,
 				057A0ACB2A1BB15A00F10B85 /* UIButton+.swift in Sources */,
 				C36D9F9E2A174169006B155F /* GuideView.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,

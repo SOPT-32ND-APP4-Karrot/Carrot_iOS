@@ -47,8 +47,6 @@ class ReceiveView: BaseView {
         messageView.snp.makeConstraints{
             $0.top.equalToSuperview()
             $0.leading.equalTo(profileImage.snp.trailing).offset(9)
-            //TODO: 동적으로 설정
-//            $0.width.equalTo(193)
             $0.height.equalTo(38)
         }
         
