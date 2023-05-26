@@ -36,6 +36,7 @@ final class ChatInputView: BaseView {
     
     lazy var sendButton = UIButton().then {
         $0.setImage(Image.chatSendIcon, for: .normal)
+        $0.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
     }
     
     override func setUI() {
@@ -74,6 +75,22 @@ final class ChatInputView: BaseView {
             $0.trailing.equalToSuperview().inset(11.53)
         }
     }
+    
+    @objc func sendButtonTapped() {
+
+        if let text = inputTextField.text {
+            let nowDate = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "a hh:mm"
+            dateFormatter.locale = Locale(identifier: "ko")
+            let str = dateFormatter.string(from: nowDate)
+
+            let chatViewController = ChatViewController()
+            chatViewController.userIdOrder.append(1)
+            chatViewController.chatContentOrder.append(text)
+            chatViewController.chatTimeOrder.append(str)
+        }
+    }
 }
 
 extension ChatInputView: UITextFieldDelegate {
@@ -82,7 +99,6 @@ extension ChatInputView: UITextFieldDelegate {
         // 키보드 업데이트 시 원하는 기능
         if inputTextField.hasText {
             sendButton.setImage(Image.chatSendIconOrange, for: .normal)
-            print("ad")
         } else {
             sendButton.setImage(Image.chatSendIcon, for: .normal)
         }
