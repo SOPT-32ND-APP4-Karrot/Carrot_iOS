@@ -46,13 +46,12 @@ class SendView: BaseView {
         messageView.snp.makeConstraints{
             $0.top.equalToSuperview()
             $0.trailing.equalToSuperview()
-            //TODO: 동적으로 설정
-            $0.width.equalTo(187)
             $0.height.equalTo(38)
         }
         
         receiveLabel.snp.makeConstraints{
-            $0.center.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.centerY.equalToSuperview()
         }
         
         timeLabel.snp.makeConstraints{

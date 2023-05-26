@@ -60,6 +60,7 @@ public enum Image {
     public static let chatAddIcon = UIImage(named: "chat_ic_add")
     public static let chatEmojiIcon = UIImage(named: "chat_ic_emoji")
     public static let chatSendIcon = UIImage(named: "chat_ic_send")
+    public static let chatSendIconOrange = UIImage(named: "chat_ic_send_orange")
     
     // MARK: - temparature
     

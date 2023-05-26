@@ -13,35 +13,35 @@ import Then
 class ChatHeader: UIView {
     
     // MARK: Component
-    private let productImageView = UIImageView().then{
+    lazy var productImageView = UIImageView().then{
         $0.image = Image.saleDiaryImage
         $0.layer.cornerRadius = 4
         $0.clipsToBounds = true
     }
     
-    private let statusLabel = UILabel().then {
+    lazy var statusLabel = UILabel().then {
         $0.font = .body3
         $0.setTextWithLineHeight(text: "거래완료", lineHeight: 22)
     }
     
-    private let productLabel = UILabel().then {
+    lazy var productLabel = UILabel().then {
         $0.font = .body5
         $0.setTextWithLineHeight(text: "스타벅스 다이어리 그린 9,000(쿠폰없음)", lineHeight: 22)
     }
     
-    private let priceLabel = UILabel().then {
+    lazy var priceLabel = UILabel().then {
         $0.font = .body3
         $0.setTextWithLineHeight(text: "9,000원", lineHeight: 22)
         
     }
     
-    private let proposalLabel = UILabel().then {
+    lazy var proposalLabel = UILabel().then {
         $0.font = .body5
         $0.setTextWithLineHeight(text: "(가격제안불가)", lineHeight: 22)
         $0.textColor = Color.carrotGray4!
     }
     
-    private let reviewButton = UIButton().then {
+    lazy var reviewButton = UIButton().then {
         $0.setTitle("거래 후기 보기", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel!.font = .body6
