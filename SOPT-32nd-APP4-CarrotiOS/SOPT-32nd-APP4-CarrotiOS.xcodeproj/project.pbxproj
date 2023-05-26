@@ -18,6 +18,7 @@
 		057A0AD32A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AD22A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift */; };
 		057A0AD52A2097D500F10B85 /* SaleProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AD42A2097D500F10B85 /* SaleProductTableViewCell.swift */; };
 		057A0ADB2A20F07F00F10B85 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ADA2A20F07F00F10B85 /* RecommendTableViewCell.swift */; };
+		057A0ADD2A20F74C00F10B85 /* SaleFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ADC2A20F74C00F10B85 /* SaleFooterView.swift */; };
 		C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */; };
 		C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */; };
 		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
@@ -85,6 +86,7 @@
 		057A0AD22A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalerProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		057A0AD42A2097D500F10B85 /* SaleProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleProductTableViewCell.swift; sourceTree = "<group>"; };
 		057A0ADA2A20F07F00F10B85 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
+		057A0ADC2A20F74C00F10B85 /* SaleFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleFooterView.swift; sourceTree = "<group>"; };
 		C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGuideTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				057A0AD22A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift */,
 				057A0AD42A2097D500F10B85 /* SaleProductTableViewCell.swift */,
 				057A0ADA2A20F07F00F10B85 /* RecommendTableViewCell.swift */,
+				057A0ADC2A20F74C00F10B85 /* SaleFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */,
+				057A0ADD2A20F74C00F10B85 /* SaleFooterView.swift in Sources */,
 				C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */,
 				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
 				DF18423C2A1795BE001A466A /* UIStackView+.swift in Sources */,
