@@ -25,6 +25,7 @@ final class ReviewViewController: UIViewController {
         
         setStyle()
         setLayout()
+        setDelegate()
     }
 }
 
@@ -50,5 +51,15 @@ extension ReviewViewController {
             $0.centerY.equalToSuperview()
             $0.centerX.equalToSuperview()
         }
+    }
+    
+    private func setDelegate() {
+        headerView.handleBackButtonDelegate = self
+    }
+}
+
+extension ReviewViewController: HandleBackButtonDelegate {
+    func popView() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
