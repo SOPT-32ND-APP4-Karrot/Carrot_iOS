@@ -18,7 +18,11 @@ class SaleProductTableViewCell: UITableViewCell {
     // MARK: - UI Components
     private let saleProductLabel = UILabel()
     private let seeDetailButton = UIButton()
-    private lazy var saleProductCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+    private lazy var saleProductCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.saleFlowLayout)
+    
+    let saleFlowLayout = UICollectionViewFlowLayout().then {
+        $0.scrollDirection = .horizontal
+    }
     
     // MARK: - init
     required init?(coder: NSCoder) {
@@ -73,9 +77,6 @@ class SaleProductTableViewCell: UITableViewCell {
     }
     
     private func setCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
         self.saleProductCollectionView.backgroundColor = .white
         self.saleProductCollectionView.delegate = self
         self.saleProductCollectionView.dataSource = self
@@ -101,9 +102,9 @@ extension SaleProductTableViewCell: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 163, height: 169)
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
-    
 }

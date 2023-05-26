@@ -69,6 +69,11 @@ class SalerProductCollectionViewCell: UICollectionViewCell {
     private func setLayout() {
         contentView.addSubview(globalStackView)
         
+//        self.snp.makeConstraints{
+//            $0.width.equalTo(UIScreen.main.bounds.size.width/2 - 5)
+//            $0.height.equalTo(163)
+//        }
+        
         productImageView.snp.makeConstraints {
             $0.height.equalTo(122)
             $0.width.equalTo(163)
