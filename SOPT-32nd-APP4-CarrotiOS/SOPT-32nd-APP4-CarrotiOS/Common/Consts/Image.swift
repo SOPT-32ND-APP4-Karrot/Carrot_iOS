@@ -35,6 +35,8 @@ public enum Image {
     public static let homeMenuIcon = UIImage(named: "home_ic_menu")
     public static let homeBellIcon = UIImage(named: "home_ic_bell")
     public static let homeDownIcon = UIImage(named: "home_ic_down")
+    public static let homeDownDownIcon = UIImage(named: "home_ic_downdown")
+    public static let homeAdvertisingImage = UIImage(named: "home_img_advertising")
     
     // MARK: - Sale
     
