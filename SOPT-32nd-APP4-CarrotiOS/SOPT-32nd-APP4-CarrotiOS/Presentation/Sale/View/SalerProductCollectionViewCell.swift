@@ -39,7 +39,7 @@ class SalerProductCollectionViewCell: UICollectionViewCell {
     private func setUI() {
         
         productImageView.do {
-            $0.image = Image.saleSalerProcudtImage
+            $0.image = Image.saleSalerProductImage
             $0.layer.cornerRadius = 5
             $0.contentMode = .scaleAspectFill
         }
@@ -50,6 +50,7 @@ class SalerProductCollectionViewCell: UICollectionViewCell {
             $0.textColor = .black
             $0.addLineHeight(lineHeight: 22)
             $0.numberOfLines = 1
+            $0.lineBreakMode = .byTruncatingTail
         }
         
         priceLabel.do {
@@ -80,7 +81,7 @@ class SalerProductCollectionViewCell: UICollectionViewCell {
         }
         
         productNameLabel.snp.makeConstraints {
-            $0.width.equalTo(productImageView)
+            $0.width.equalTo(151)
         }
         
         globalStackView.snp.makeConstraints {
