@@ -69,6 +69,7 @@
 		DF47025E2A1F713300A71214 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47025D2A1F713300A71214 /* NSObject+.swift */; };
 		DF4702622A20AD0D00A71214 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702612A20AD0D00A71214 /* HomeHeaderView.swift */; };
 		DF4702642A20B4CA00A71214 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702632A20B4CA00A71214 /* HomeService.swift */; };
+		DF4702662A20EB4A00A71214 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702652A20EB4A00A71214 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		DF47025D2A1F713300A71214 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		DF4702612A20AD0D00A71214 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		DF4702632A20B4CA00A71214 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		DF4702652A20EB4A00A71214 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 				DF18423D2A179E57001A466A /* HomeViewController.swift */,
 				DF4702592A1F4D3C00A71214 /* HomeTableViewCell.swift */,
 				DF4702612A20AD0D00A71214 /* HomeHeaderView.swift */,
+				DF4702652A20EB4A00A71214 /* TabBarController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */,
 				C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */,
 				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
+				DF4702662A20EB4A00A71214 /* TabBarController.swift in Sources */,
 				DF18423C2A1795BE001A466A /* UIStackView+.swift in Sources */,
 				C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */,
 				C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */,

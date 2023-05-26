@@ -11,17 +11,17 @@ public enum Image {
     
     // MARK: - Tab Bar
     
-    public static let hoverHomeIcon = UIImage(named: "hoverHome")
-    public static let hoverMenuIcon = UIImage(named: "hoverMenu")
-    public static let hoverMapIcon = UIImage(named: "hoverMap")
-    public static let hoverChatIcon = UIImage(named: "hoverChat")
-    public static let hoverMyIcon = UIImage(named: "hoverMy")
+    public static let hoverHomeIcon = UIImage(named: "hoverHome")!
+    public static let hoverMenuIcon = UIImage(named: "hoverMenu")!
+    public static let hoverMapIcon = UIImage(named: "hoverMap")!
+    public static let hoverChatIcon = UIImage(named: "hoverChat")!
+    public static let hoverMyIcon = UIImage(named: "hoverMy")!
     
-    public static let defaultHomeIcon = UIImage(named: "defaultHome")
-    public static let defaultMenuIcon = UIImage(named: "defaultMenu")
-    public static let defaultMapIcon = UIImage(named: "defaultMap")
-    public static let defaultChatIcon = UIImage(named: "defaultChat")
-    public static let defaultMyIcon = UIImage(named: "defaultMy")
+    public static let defaultHomeIcon = UIImage(named: "defaultHome")!
+    public static let defaultMenuIcon = UIImage(named: "defaultMenu")!
+    public static let defaultMapIcon = UIImage(named: "defaultMap")!
+    public static let defaultChatIcon = UIImage(named: "defaultChat")!
+    public static let defaultMyIcon = UIImage(named: "defaultMy")!
     
     // MARK: - Heart
     
