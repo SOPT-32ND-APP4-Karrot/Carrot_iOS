@@ -14,7 +14,7 @@ final class HomeViewController: UIViewController {
     
     private let homeNavigationView = HomeNavigationView()
     
-    private let homeTableView = UITableView(frame: .zero, style: .grouped)
+    private let homeTableView = UITableView()
     
     override func viewDidLoad() {
         
@@ -35,7 +35,7 @@ extension HomeViewController {
         homeTableView.do {
             $0.showsVerticalScrollIndicator = false // 스크롤 바 안 보이게
             $0.backgroundColor = Color.carrotWhite
-            $0.registerCell(CarrotTableViewCell.self)
+            $0.registerCell(HomeTableViewCell.self)
 //            $0.registerReusableView(HomeHeaderView.self)
         }
     }
@@ -72,7 +72,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = homeTableView.dequeueCell(type: CarrotTableViewCell.self, indexPath: indexPath)
+        let cell = homeTableView.dequeueCell(type: HomeTableViewCell.self, indexPath: indexPath)
         
         return cell
     }

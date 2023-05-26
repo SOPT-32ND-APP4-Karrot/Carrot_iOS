@@ -18,6 +18,7 @@ final class HomeNavigationView: UIView {
     private let menuButton = UIButton()
     private let bellButton = UIButton()
     private let rightStackView = UIStackView()
+    private let bottomBorderView = UIView()
     
     override init(frame: CGRect) {
         
@@ -65,11 +66,13 @@ extension HomeNavigationView {
             $0.spacing = 13
         }
         
-        addBottomBorder(with: Color.carrotGray3, andWidth: 1.0)
+        bottomBorderView.do {
+            $0.backgroundColor = Color.carrotGray3
+        }
     }
     
     private func setLayout() {
-        self.addSubviews(dongLabel, listButton, searchButton, menuButton, bellButton, rightStackView)
+        self.addSubviews(dongLabel, listButton, searchButton, menuButton, bellButton, rightStackView, bottomBorderView)
         
         dongLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(24)
@@ -99,6 +102,12 @@ extension HomeNavigationView {
             $0.trailing.equalToSuperview().inset(19)
             $0.bottom.equalToSuperview().inset(10)
             $0.height.equalTo(25)
+        }
+        
+        bottomBorderView.snp.makeConstraints {
+            $0.height.equalTo(1)
+            $0.top.equalToSuperview().offset(43)
+            $0.leading.trailing.equalToSuperview()
         }
         
         self.snp.makeConstraints {

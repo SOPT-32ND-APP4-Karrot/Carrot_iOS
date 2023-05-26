@@ -1,5 +1,5 @@
 //
-//  CarrotTableViewCell.swift
+//  HomeTableViewCell.swift
 //  SOPT-32nd-APP4-CarrotiOS
 //
 //  Created by kyun on 2023/05/25.
@@ -10,9 +10,9 @@ import UIKit
 import SnapKit
 import Then
 
-final class CarrotTableViewCell: UITableViewCell {
+final class HomeTableViewCell: UITableViewCell {
     
-    static let identifier = "CarrotTableViewCell"
+    static let identifier = "HomeTableViewCell"
     
     private lazy var productImage = UIImageView()
     private let productLabel = UILabel()
@@ -38,7 +38,7 @@ final class CarrotTableViewCell: UITableViewCell {
     
 }
 
-extension CarrotTableViewCell {
+extension HomeTableViewCell {
     
     private func setUI() {
         

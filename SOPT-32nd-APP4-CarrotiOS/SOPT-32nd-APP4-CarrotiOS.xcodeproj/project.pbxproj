@@ -65,9 +65,10 @@
 		DF18423C2A1795BE001A466A /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18423B2A1795BE001A466A /* UIStackView+.swift */; };
 		DF18423E2A179E57001A466A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18423D2A179E57001A466A /* HomeViewController.swift */; };
 		DF4702522A189FC000A71214 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702512A189FC000A71214 /* HomeDataModel.swift */; };
-		DF47025A2A1F4D3C00A71214 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702592A1F4D3C00A71214 /* CarrotTableViewCell.swift */; };
+		DF47025A2A1F4D3C00A71214 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702592A1F4D3C00A71214 /* HomeTableViewCell.swift */; };
 		DF47025C2A1F70EE00A71214 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47025B2A1F70EE00A71214 /* UITableView+.swift */; };
 		DF47025E2A1F713300A71214 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47025D2A1F713300A71214 /* NSObject+.swift */; };
+		DF4702622A20AD0D00A71214 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4702612A20AD0D00A71214 /* HomeHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,9 +128,10 @@
 		DF18423B2A1795BE001A466A /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		DF18423D2A179E57001A466A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DF4702512A189FC000A71214 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
-		DF4702592A1F4D3C00A71214 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
+		DF4702592A1F4D3C00A71214 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DF47025B2A1F70EE00A71214 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		DF47025D2A1F713300A71214 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		DF4702612A20AD0D00A71214 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,7 +383,8 @@
 			children = (
 				DF1842392A178028001A466A /* HomeNavigationView.swift */,
 				DF18423D2A179E57001A466A /* HomeViewController.swift */,
-				DF4702592A1F4D3C00A71214 /* CarrotTableViewCell.swift */,
+				DF4702592A1F4D3C00A71214 /* HomeTableViewCell.swift */,
+				DF4702612A20AD0D00A71214 /* HomeHeaderView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -557,7 +560,7 @@
 				057A0ACD2A1BB54600F10B85 /* DealTipView.swift in Sources */,
 				DF18423E2A179E57001A466A /* HomeViewController.swift in Sources */,
 				DF1842322A120BCD001A466A /* UIView+.swift in Sources */,
-				DF47025A2A1F4D3C00A71214 /* CarrotTableViewCell.swift in Sources */,
+				DF47025A2A1F4D3C00A71214 /* HomeTableViewCell.swift in Sources */,
 				DF47025C2A1F70EE00A71214 /* UITableView+.swift in Sources */,
 				C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
@@ -574,7 +577,8 @@
 				DF1842382A127550001A466A /* BaseView.swift in Sources */,
 				DF18423A2A178028001A466A /* HomeNavigationView.swift in Sources */,
 				057A0AD12A1FCA2000F10B85 /* SaleThirdSectionCell.swift in Sources */,
-				DF18423A2A178028001A466A /* HomeHeaderView.swift in Sources */,
+				DF18423A2A178028001A466A /* HomeNavigationView.swift in Sources */,
+				DF4702622A20AD0D00A71214 /* HomeHeaderView.swift in Sources */,
 				055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */,
 				C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */,
 				C3D71D732A208075006222A4 /* ReviewViewController.swift in Sources */,
