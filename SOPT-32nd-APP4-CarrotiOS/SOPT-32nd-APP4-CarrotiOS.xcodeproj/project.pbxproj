@@ -160,6 +160,36 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		C3D71D6F2A207DA5006222A4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */,
+				C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */,
+				C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C3D71D702A207DAC006222A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFFB292A134E8400FACA8E /* ChatViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C3D71D712A207DB3006222A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */,
+				C36D9F9D2A174169006B155F /* GuideView.swift */,
+				C32525242A17541A002629E0 /* ReceiveView.swift */,
+				C32525262A176201002629E0 /* SendView.swift */,
+				C30F6D2A2A189BB5003A119E /* ChatInputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C3FFFB242A13393400FACA8E /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,15 +349,9 @@
 		DF1841E72A11C294001A466A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				C3FFFB292A134E8400FACA8E /* ChatViewController.swift */,
-				C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */,
-				C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */,
-				C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */,
-				C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */,
-				C36D9F9D2A174169006B155F /* GuideView.swift */,
-				C32525242A17541A002629E0 /* ReceiveView.swift */,
-				C32525262A176201002629E0 /* SendView.swift */,
-				C30F6D2A2A189BB5003A119E /* ChatInputView.swift */,
+				C3D71D702A207DAC006222A4 /* ViewController */,
+				C3D71D6F2A207DA5006222A4 /* Cell */,
+				C3D71D712A207DB3006222A4 /* View */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
