@@ -22,6 +22,7 @@ final class ChatViewController: UIViewController {
     
     var chatContentOrder : [String] = []
     var chatTimeOrder: [String] = []
+    var chatRoom: Int = 1
     
     //MARK: Components
     let headerView = HeaderView()
@@ -58,12 +59,17 @@ final class ChatViewController: UIViewController {
         setStyle()
         setDelegate()
         setLayout()
+        setAddTarget()
         setKeyboardObserver()
         hideKeyboardTappedAround()
     }
 }
 
 extension ChatViewController {
+    
+    private func setAddTarget() {
+        chatHeader.reviewButton.addTarget(self, action: #selector(reviewButtonTapped), for: .touchUpInside)
+    }
     
     private func setStyle() {
         view.backgroundColor = .white
@@ -190,8 +196,7 @@ extension ChatViewController {
     
     
     private func chatData() {
-       //TODO: 이전 뷰에서 RoomId 받아옴
-        ChatService.shared.chat(chatRoomId: 2) { response in
+        ChatService.shared.chat(chatRoomId: chatRoom) { response in
             switch response {
             case .success(let data):
                 guard let data = data as? Chat else { return }
@@ -224,6 +229,11 @@ extension ChatViewController {
                 return
             }
         }
+    }
+    
+    @objc func reviewButtonTapped() {
+        let reviewViewController = ReviewViewController()
+        self.navigationController?.pushViewController(reviewViewController, animated: true)
     }
 }
 
