@@ -59,7 +59,7 @@ final class ChatViewController: UIViewController {
         setDelegate()
         setLayout()
         setKeyboardObserver()
-        hideKeyboardWhenTappedAround()
+        hideKeyboardTappedAround()
     }
 }
 
@@ -151,7 +151,27 @@ extension ChatViewController {
         }
     }
     
+    func hideKeyboardTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.cancelsTouchesInView = false
+        chatTableView.addGestureRecognizer(tap)
+    }
+
+    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        let location = gestureRecognizer.location(in: chatTableView)
+        let tappedView = chatTableView.hitTest(location, with: nil)
+        
+        // 특정 뷰를 터치한 경우 키보드를 내리지 않음
+        guard tappedView != chatInputView else {
+            return
+        }
+        
+        // 특정 뷰 이외의 영역을 터치한 경우 키보드를 내림
+        self.view.endEditing(true)
+    }
+    
     @objc override func keyboardWillHide(_ notification: NSNotification) {
+        print("내려감")
         
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
             return
