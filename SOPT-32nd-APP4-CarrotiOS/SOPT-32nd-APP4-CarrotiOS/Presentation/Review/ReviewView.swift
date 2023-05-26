@@ -33,7 +33,6 @@ final class ReviewView: BaseView {
     let sendReviewLabel = UILabel().then {
         $0.font = .body2
         $0.setTextWithLineHeight(text: " · 시간 약속을 잘 지켜요.\n · 친절하고 매너가 좋아요.\n · 응답이 빨라요.", lineHeight: 27.2)
-        $0.addLetterSpacing(0.05)
         $0.numberOfLines = 0
     }
     
@@ -58,7 +57,6 @@ final class ReviewView: BaseView {
     let receiveReviewLabel = UILabel().then {
         $0.font = .body2
         $0.setTextWithLineHeight(text: " · 시간 약속을 잘 지켜요.\n · 친절하고 매너가 좋아요.\n · 응답이 빨라요.", lineHeight: 27.2)
-        $0.addLetterSpacing(0.05)
         $0.numberOfLines = 0
     }
     
