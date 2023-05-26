@@ -66,7 +66,8 @@ class SaleProductTableViewCell: UITableViewCell {
         
         saleProductCollectionView.snp.makeConstraints {
             $0.top.equalTo(saleProductLabel.snp.bottom).offset(20)
-            $0.bottom.equalToSuperview().inset(23)
+            $0.height.equalTo(170)
+            $0.leading.trailing.equalToSuperview().inset(15)
         }
         
     }
@@ -97,6 +98,12 @@ extension SaleProductTableViewCell: UICollectionViewDataSource {
 
 extension SaleProductTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 163, height: 169)
+        return CGSize(width: 163, height: 169)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    
 }

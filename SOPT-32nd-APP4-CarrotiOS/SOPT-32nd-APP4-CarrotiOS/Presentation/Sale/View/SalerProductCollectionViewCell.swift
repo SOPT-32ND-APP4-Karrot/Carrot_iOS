@@ -74,6 +74,10 @@ class SalerProductCollectionViewCell: UICollectionViewCell {
             $0.width.equalTo(163)
         }
         
+        productNameLabel.snp.makeConstraints {
+            $0.width.equalTo(productImageView)
+        }
+        
         globalStackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
