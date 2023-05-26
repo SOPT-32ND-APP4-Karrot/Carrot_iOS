@@ -107,13 +107,13 @@ final class ReviewView: BaseView {
         sendReviewView.snp.makeConstraints{
             $0.top.equalTo(sendImageView.snp.bottom)
             $0.width.equalTo(sendImageView)
-            $0.height.equalTo(127)
             $0.leading.trailing.equalToSuperview().inset(16)
             $0.centerX.equalToSuperview()
         }
         
         sendReviewLabel.snp.makeConstraints{
             $0.centerY.equalToSuperview()
+            $0.top.bottom.equalToSuperview().inset(23)
             $0.leading.equalToSuperview().offset(12)
         }
         
@@ -132,13 +132,13 @@ final class ReviewView: BaseView {
         receiveReviewView.snp.makeConstraints{
             $0.top.equalTo(receiveImageView.snp.bottom)
             $0.width.equalTo(receiveImageView)
-            $0.height.equalTo(127)
             $0.leading.trailing.equalToSuperview().inset(16)
             $0.centerX.equalToSuperview()
         }
         
         receiveReviewLabel.snp.makeConstraints{
             $0.centerY.equalToSuperview()
+            $0.top.bottom.equalToSuperview().inset(23)
             $0.leading.equalToSuperview().offset(12)
         }
         
