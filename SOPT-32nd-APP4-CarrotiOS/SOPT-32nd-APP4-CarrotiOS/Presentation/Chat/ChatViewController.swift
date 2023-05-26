@@ -30,7 +30,7 @@ final class ChatViewController: UIViewController {
     
     let chatInputView = ChatInputView()
     
-    private lazy var chatTableView = UITableView(frame: .zero, style: .plain).then {
+    lazy var chatTableView = UITableView(frame: .zero, style: .plain).then {
         $0.register(ChatGuideTableViewCell.self, forCellReuseIdentifier: ChatGuideTableViewCell.identifier)
         $0.register(ChatReceiveTableViewCell.self, forCellReuseIdentifier: ChatReceiveTableViewCell.identifier)
         $0.register(ChatSendTableViewCell.self, forCellReuseIdentifier: ChatSendTableViewCell.identifier)
@@ -54,12 +54,12 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chatData()
         setStyle()
         setDelegate()
         setLayout()
         setKeyboardObserver()
-        hideKeyboardWhenTappedAround()
-        chatData()
+        hideKeyboardTappedAround()
     }
 }
 
@@ -72,6 +72,7 @@ extension ChatViewController {
     
     private func setDelegate() {
         headerView.handleBackButtonDelegate = self
+        chatInputView.delegate = self
     }
     
     private func setLayout() {
@@ -150,7 +151,27 @@ extension ChatViewController {
         }
     }
     
+    func hideKeyboardTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.cancelsTouchesInView = false
+        chatTableView.addGestureRecognizer(tap)
+    }
+
+    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        let location = gestureRecognizer.location(in: chatTableView)
+        let tappedView = chatTableView.hitTest(location, with: nil)
+        
+        // 특정 뷰를 터치한 경우 키보드를 내리지 않음
+        guard tappedView != chatInputView else {
+            return
+        }
+        
+        // 특정 뷰 이외의 영역을 터치한 경우 키보드를 내림
+        self.view.endEditing(true)
+    }
+    
     @objc override func keyboardWillHide(_ notification: NSNotification) {
+        print("내려감")
         
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
             return
@@ -170,7 +191,7 @@ extension ChatViewController {
     
     private func chatData() {
        //TODO: 이전 뷰에서 RoomId 받아옴
-        ChatService.shared.chat(chatRoomId: 1) { response in
+        ChatService.shared.chat(chatRoomId: 2) { response in
             switch response {
             case .success(let data):
                 guard let data = data as? Chat else { return }
