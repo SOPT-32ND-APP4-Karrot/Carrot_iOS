@@ -46,6 +46,11 @@ class SaleViewController: BaseViewController {
                                     forCellReuseIdentifier: SaleSecondSectionCell.identifier)
         self.saleTableView.register(SaleThirdSectionCell.self,
                                     forCellReuseIdentifier: SaleThirdSectionCell.identifier)
+        self.saleTableView.register(SaleProductTableViewCell.self,
+                                    forCellReuseIdentifier: SaleProductTableViewCell.identifier)
+        self.saleTableView.register(RecommendTableViewCell.self,
+                                    forCellReuseIdentifier: RecommendTableViewCell.identifier)
+        
         self.saleTableView.tableHeaderView?.frame = .init(origin: .zero,
                                                           size: .init(width: UIScreen.main.bounds.width,
                                                                       height: 383))
@@ -72,7 +77,7 @@ extension SaleViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,6 +91,12 @@ extension SaleViewController: UITableViewDataSource {
         } else if indexPath.section == 2 {
             guard let thirdSectionCell = tableView.dequeueReusableCell(withIdentifier: SaleThirdSectionCell.identifier) as? SaleThirdSectionCell else {return UITableViewCell()}
             return thirdSectionCell
+        } else if indexPath.section == 3 {
+            guard let fourthSectionCell = tableView.dequeueReusableCell(withIdentifier: SaleProductTableViewCell.identifier) as? SaleProductTableViewCell else {return UITableViewCell()}
+            return fourthSectionCell
+        } else if indexPath.section == 4 {
+            guard let fifthSectionCell = tableView.dequeueReusableCell(withIdentifier: RecommendTableViewCell.identifier) as? RecommendTableViewCell else {return UITableViewCell()}
+            return fifthSectionCell
         }
         else {
             guard let dummyCell = tableView.dequeueReusableCell(withIdentifier: SaleDummyTableViewCell.identifier) as? SaleDummyTableViewCell else {return UITableViewCell()}
@@ -100,8 +111,11 @@ extension SaleViewController: UITableViewDataSource {
             return 390
         } else if indexPath.section == 2 {
             return 188
+        } else if indexPath.section == 3 {
+            return 254
+        } else if indexPath.section == 4 {
+            return 600
         }
         return 81
     }
-    
 }
