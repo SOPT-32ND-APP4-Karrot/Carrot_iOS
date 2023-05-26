@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - Home
-struct Home: Codable {
+// MARK: - HomeDataModel
+struct HomeDataModel: Codable {
     let status: Int
     let message: String
     let data: [Datum]
