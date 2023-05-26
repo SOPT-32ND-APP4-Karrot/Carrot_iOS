@@ -15,6 +15,8 @@
 		057A0ACB2A1BB15A00F10B85 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */; };
 		057A0ACD2A1BB54600F10B85 /* DealTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ACC2A1BB54600F10B85 /* DealTipView.swift */; };
 		057A0AD12A1FCA2000F10B85 /* SaleThirdSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AD02A1FCA2000F10B85 /* SaleThirdSectionCell.swift */; };
+		057A0AD32A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AD22A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift */; };
+		057A0AD52A2097D500F10B85 /* SaleProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AD42A2097D500F10B85 /* SaleProductTableViewCell.swift */; };
 		C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */; };
 		C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */; };
 		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
@@ -79,6 +81,8 @@
 		057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		057A0ACC2A1BB54600F10B85 /* DealTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealTipView.swift; sourceTree = "<group>"; };
 		057A0AD02A1FCA2000F10B85 /* SaleThirdSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleThirdSectionCell.swift; sourceTree = "<group>"; };
+		057A0AD22A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalerProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		057A0AD42A2097D500F10B85 /* SaleProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleProductTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGuideTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				057A0AC42A189C8800F10B85 /* SaleSecondSectionCell.swift */,
 				057A0ACC2A1BB54600F10B85 /* DealTipView.swift */,
 				057A0AD02A1FCA2000F10B85 /* SaleThirdSectionCell.swift */,
+				057A0AD22A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift */,
+				057A0AD42A2097D500F10B85 /* SaleProductTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +593,8 @@
 				C3D71D752A208A3B006222A4 /* ReviewView.swift in Sources */,
 				057A0ACB2A1BB15A00F10B85 /* UIButton+.swift in Sources */,
 				C36D9F9E2A174169006B155F /* GuideView.swift in Sources */,
+				057A0AD52A2097D500F10B85 /* SaleProductTableViewCell.swift in Sources */,
+				057A0AD32A1FDF3C00F10B85 /* SalerProductCollectionViewCell.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
