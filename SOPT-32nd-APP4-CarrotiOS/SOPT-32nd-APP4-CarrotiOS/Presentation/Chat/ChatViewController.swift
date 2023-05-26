@@ -30,7 +30,7 @@ final class ChatViewController: UIViewController {
     
     let chatInputView = ChatInputView()
     
-    private lazy var chatTableView = UITableView(frame: .zero, style: .plain).then {
+    lazy var chatTableView = UITableView(frame: .zero, style: .plain).then {
         $0.register(ChatGuideTableViewCell.self, forCellReuseIdentifier: ChatGuideTableViewCell.identifier)
         $0.register(ChatReceiveTableViewCell.self, forCellReuseIdentifier: ChatReceiveTableViewCell.identifier)
         $0.register(ChatSendTableViewCell.self, forCellReuseIdentifier: ChatSendTableViewCell.identifier)
@@ -54,12 +54,12 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chatData()
         setStyle()
         setDelegate()
         setLayout()
         setKeyboardObserver()
         hideKeyboardWhenTappedAround()
-        chatData()
     }
 }
 
@@ -72,6 +72,7 @@ extension ChatViewController {
     
     private func setDelegate() {
         headerView.handleBackButtonDelegate = self
+        chatInputView.delegate = self
     }
     
     private func setLayout() {

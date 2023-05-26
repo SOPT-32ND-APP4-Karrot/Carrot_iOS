@@ -12,6 +12,8 @@ import Then
 
 final class ChatInputView: BaseView {
     
+    weak var delegate: ChatViewController?
+    
     lazy var plusButton = UIButton().then {
         $0.setImage(Image.chatAddIcon, for: .normal)
     }
@@ -77,24 +79,29 @@ final class ChatInputView: BaseView {
     }
     
     @objc func sendButtonTapped() {
-
+        
         if let text = inputTextField.text {
             let nowDate = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "a hh:mm"
             dateFormatter.locale = Locale(identifier: "ko")
             let str = dateFormatter.string(from: nowDate)
-
-            let chatViewController = ChatViewController()
-            chatViewController.userIdOrder.append(1)
-            chatViewController.chatContentOrder.append(text)
-            chatViewController.chatTimeOrder.append(str)
+            
+            delegate?.userIdOrder.append(1)
+            delegate?.chatContentOrder.append(text)
+            delegate?.chatTimeOrder.append(str)
+            
+            delegate?.chatTableView.reloadData()
+            
+            print(delegate?.chatContentOrder)
+            print(delegate?.chatTimeOrder)
+            inputTextField.text = ""
         }
     }
 }
 
 extension ChatInputView: UITextFieldDelegate {
-
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         // 키보드 업데이트 시 원하는 기능
         if inputTextField.hasText {
