@@ -96,6 +96,8 @@ final class ChatInputView: BaseView {
             print(delegate?.chatContentOrder)
             print(delegate?.chatTimeOrder)
             inputTextField.text = ""
+            sendButton.setImage(Image.chatSendIcon, for: .normal)
+            sendButton.isEnabled = false
         }
     }
 }
@@ -106,8 +108,10 @@ extension ChatInputView: UITextFieldDelegate {
         // 키보드 업데이트 시 원하는 기능
         if inputTextField.hasText {
             sendButton.setImage(Image.chatSendIconOrange, for: .normal)
+            sendButton.isEnabled = true
         } else {
             sendButton.setImage(Image.chatSendIcon, for: .normal)
+            sendButton.isEnabled = false
         }
     }
 }
