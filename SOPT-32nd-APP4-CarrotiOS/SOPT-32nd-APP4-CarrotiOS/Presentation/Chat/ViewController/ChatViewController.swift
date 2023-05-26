@@ -59,12 +59,17 @@ final class ChatViewController: UIViewController {
         setStyle()
         setDelegate()
         setLayout()
+        setAddTarget()
         setKeyboardObserver()
         hideKeyboardTappedAround()
     }
 }
 
 extension ChatViewController {
+    
+    private func setAddTarget() {
+        chatHeader.reviewButton.addTarget(self, action: #selector(reviewButtonTapped), for: .touchUpInside)
+    }
     
     private func setStyle() {
         view.backgroundColor = .white
@@ -191,7 +196,6 @@ extension ChatViewController {
     
     
     private func chatData() {
-       //TODO: 이전 뷰에서 RoomId 받아옴
         ChatService.shared.chat(chatRoomId: chatRoom) { response in
             switch response {
             case .success(let data):
@@ -225,6 +229,11 @@ extension ChatViewController {
                 return
             }
         }
+    }
+    
+    @objc func reviewButtonTapped() {
+        let reviewViewController = ReviewViewController()
+        self.navigationController?.pushViewController(reviewViewController, animated: true)
     }
 }
 

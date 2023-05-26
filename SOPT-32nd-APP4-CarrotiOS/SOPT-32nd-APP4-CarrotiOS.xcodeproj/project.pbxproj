@@ -29,6 +29,7 @@
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
+		C3D71D732A208075006222A4 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D71D722A208075006222A4 /* ReviewViewController.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -39,7 +40,6 @@
 		DF1841D52A11BD1C001A466A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1841D32A11BD1C001A466A /* LaunchScreen.storyboard */; };
 		DF1841F82A11C405001A466A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841F72A11C405001A466A /* Color.swift */; };
 		DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841F92A11C40D001A466A /* UIFont+.swift */; };
-		DF1842022A11C433001A466A /* g.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842012A11C433001A466A /* g.swift */; };
 		DF1842042A11C43A001A466A /* h.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842032A11C43A001A466A /* h.swift */; };
 		DF1842062A11C445001A466A /* i.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842052A11C445001A466A /* i.swift */; };
 		DF18420A2A11C451001A466A /* k.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842092A11C451001A466A /* k.swift */; };
@@ -89,6 +89,7 @@
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		C3D71D722A208075006222A4 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		DF1841D62A11BD1C001A466A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF1841F72A11C405001A466A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DF1841F92A11C40D001A466A /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
-		DF1842012A11C433001A466A /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
 		DF1842032A11C43A001A466A /* h.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h.swift; sourceTree = "<group>"; };
 		DF1842052A11C445001A466A /* i.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i.swift; sourceTree = "<group>"; };
 		DF1842092A11C451001A466A /* k.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = k.swift; sourceTree = "<group>"; };
@@ -341,7 +341,7 @@
 		DF1841E62A11C28F001A466A /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				DF1842012A11C433001A466A /* g.swift */,
+				C3D71D722A208075006222A4 /* ReviewViewController.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -562,6 +562,7 @@
 				DF18423A2A178028001A466A /* HomeHeaderView.swift in Sources */,
 				055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */,
 				C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */,
+				C3D71D732A208075006222A4 /* ReviewViewController.swift in Sources */,
 				DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */,
 				DF1841F82A11C405001A466A /* Color.swift in Sources */,
 				DF1842122A11C46D001A466A /* o.swift in Sources */,
@@ -570,7 +571,6 @@
 				057A0ACB2A1BB15A00F10B85 /* UIButton+.swift in Sources */,
 				C36D9F9E2A174169006B155F /* GuideView.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,
-				DF1842022A11C433001A466A /* g.swift in Sources */,
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
 				C312AB172A1FDD8500DA32EE /* String+.swift in Sources */,

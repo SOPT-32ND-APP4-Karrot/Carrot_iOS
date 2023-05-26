@@ -122,7 +122,6 @@ extension ChatHeader {
     }
     
     private func setAddTarget() {
-        
     }
     
     func addBottomBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
