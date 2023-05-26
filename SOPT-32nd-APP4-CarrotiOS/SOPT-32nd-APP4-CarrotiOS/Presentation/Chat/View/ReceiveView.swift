@@ -47,13 +47,12 @@ class ReceiveView: BaseView {
         messageView.snp.makeConstraints{
             $0.top.equalToSuperview()
             $0.leading.equalTo(profileImage.snp.trailing).offset(9)
-            //TODO: 동적으로 설정
-            $0.width.equalTo(193)
-            $0.height.equalTo(63)
+            $0.height.equalTo(38)
         }
         
         receiveLabel.snp.makeConstraints{
-            $0.center.equalToSuperview()
+            $0.centerY.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(15)
         }
         
         timeLabel.snp.makeConstraints{

@@ -12,7 +12,17 @@ import Then
 
 final class ChatViewController: UIViewController {
     
-    var dummy: [Int] = [1, 2, 1, 0, 2, 1, 2, 1, 1]
+    var chat: [Chat] = []
+    
+    var userIdOrder: [Int] = [] {
+        didSet {
+            self.chatTableView.reloadData()
+        }
+    }
+    
+    var chatContentOrder : [String] = []
+    var chatTimeOrder: [String] = []
+    var chatRoom: Int = 1
     
     //MARK: Components
     let headerView = HeaderView()
@@ -21,7 +31,7 @@ final class ChatViewController: UIViewController {
     
     let chatInputView = ChatInputView()
     
-    private lazy var chatTableView = UITableView(frame: .zero, style: .plain).then {
+    lazy var chatTableView = UITableView(frame: .zero, style: .plain).then {
         $0.register(ChatGuideTableViewCell.self, forCellReuseIdentifier: ChatGuideTableViewCell.identifier)
         $0.register(ChatReceiveTableViewCell.self, forCellReuseIdentifier: ChatReceiveTableViewCell.identifier)
         $0.register(ChatSendTableViewCell.self, forCellReuseIdentifier: ChatSendTableViewCell.identifier)
@@ -31,7 +41,7 @@ final class ChatViewController: UIViewController {
         $0.separatorStyle = .none
     }
     
-    private let headerViewTitle = UILabel().then {
+    lazy var headerViewTitle = UILabel().then {
         $0.font = .title
         $0.addLineHeight(lineHeight: 28)
         $0.text = "마포아씨"
@@ -45,15 +55,21 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chatData()
         setStyle()
         setDelegate()
         setLayout()
+        setAddTarget()
         setKeyboardObserver()
-        hideKeyboardWhenTappedAround()
+        hideKeyboardTappedAround()
     }
 }
 
 extension ChatViewController {
+    
+    private func setAddTarget() {
+        chatHeader.reviewButton.addTarget(self, action: #selector(reviewButtonTapped), for: .touchUpInside)
+    }
     
     private func setStyle() {
         view.backgroundColor = .white
@@ -62,7 +78,7 @@ extension ChatViewController {
     
     private func setDelegate() {
         headerView.handleBackButtonDelegate = self
-        //        chatInputView.inputTextField.delegate = self
+        chatInputView.delegate = self
     }
     
     private func setLayout() {
@@ -128,20 +144,40 @@ extension ChatViewController {
             let newTableViewHeight = self.view.bounds.height - headerView.frame.height - chatHeader.frame.height - chatInputView.frame.height - keyboardHeight
             chatTableView.frame.size.height = newTableViewHeight
             
-                self.chatTableView.snp.makeConstraints{
-                    $0.top.equalTo(self.chatHeader.snp.bottom)
-                    $0.width.equalToSuperview()
-                    $0.bottom.equalTo(self.chatInputView.snp.top)
-                }
-                
-                self.chatInputView.snp.makeConstraints{
-                    $0.bottom.equalToSuperview().inset(keyboardHeight - 32)
-                    $0.width.equalToSuperview()
-                }
+            self.chatTableView.snp.makeConstraints{
+                $0.top.equalTo(self.chatHeader.snp.bottom)
+                $0.width.equalToSuperview()
+                $0.bottom.equalTo(self.chatInputView.snp.top)
+            }
+            
+            self.chatInputView.snp.makeConstraints{
+                $0.bottom.equalToSuperview().inset(keyboardHeight - 32)
+                $0.width.equalToSuperview()
+            }
         }
     }
     
+    func hideKeyboardTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.cancelsTouchesInView = false
+        chatTableView.addGestureRecognizer(tap)
+    }
+
+    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        let location = gestureRecognizer.location(in: chatTableView)
+        let tappedView = chatTableView.hitTest(location, with: nil)
+        
+        // 특정 뷰를 터치한 경우 키보드를 내리지 않음
+        guard tappedView != chatInputView else {
+            return
+        }
+        
+        // 특정 뷰 이외의 영역을 터치한 경우 키보드를 내림
+        self.view.endEditing(true)
+    }
+    
     @objc override func keyboardWillHide(_ notification: NSNotification) {
+        print("내려감")
         
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
             return
@@ -157,6 +193,48 @@ extension ChatViewController {
         let newTableViewHeight = self.view.bounds.height - headerView.frame.height - chatHeader.frame.height - chatInputView.frame.height - 32
         chatTableView.frame.size.height = newTableViewHeight
     }
+    
+    
+    private func chatData() {
+        ChatService.shared.chat(chatRoomId: chatRoom) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? Chat else { return }
+                dump(data)
+                self.chat.append(data)
+                print(self.chat)
+
+                if data.data.chatMessageList.count != 0 {
+                    for i in 0...data.data.chatMessageList.count-1  {
+                        self.userIdOrder.append(data.data.chatMessageList[i].writer.userID)
+                        self.chatContentOrder.append(data.data.chatMessageList[i].content)
+                        self.chatTimeOrder.append(data.data.chatMessageList[i].time)
+                        
+                        if data.data.chatMessageList[i].hasKeyword == true {
+                            self.userIdOrder.append(0)
+                            self.chatContentOrder.append("안내")
+                            self.chatTimeOrder.append("0")
+                        }
+                        print(self.chatTimeOrder)
+                    }
+                }
+                
+                self.chatHeader.productImageView.kfSetImage(url: self.chat[0].data.sale.saleImgURL)
+                self.chatHeader.statusLabel.text = String(self.chat[0].data.sale.status)
+                self.chatHeader.productLabel.text = String(self.chat[0].data.sale.title)
+                self.chatHeader.priceLabel.text = String(self.chat[0].data.sale.price.priceText)
+                self.chatHeader.proposalLabel.text = self.chat[0].data.sale.isSuggest ? "" : "(가격제안불가)"
+                self.headerViewTitle.text = String(self.chat[0].data.seller.nickname)
+            default:
+                return
+            }
+        }
+    }
+    
+    @objc func reviewButtonTapped() {
+        let reviewViewController = ReviewViewController()
+        self.navigationController?.pushViewController(reviewViewController, animated: true)
+    }
 }
 
 extension ChatViewController: HandleBackButtonDelegate {
@@ -167,36 +245,38 @@ extension ChatViewController: HandleBackButtonDelegate {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummy.count
+        return userIdOrder.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch dummy[indexPath.row] {
+        switch userIdOrder[indexPath.row] {
         case 0:
             guard let guideCell = tableView.dequeueReusableCell(withIdentifier: ChatGuideTableViewCell.identifier, for: indexPath) as? ChatGuideTableViewCell else { return UITableViewCell() }
+            guideCell.guideView.guideLabel1.text = String(self.chat[0].data.seller.nickname) + "님과 거래 예약을 했어요. 당근페이에 가"
             guideCell.selectionStyle = .none
             return guideCell
         case 1:
-            guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
-            receiveCell.selectionStyle = .none
-            return receiveCell
-        case 2:
             guard let sendCell = tableView.dequeueReusableCell(withIdentifier: ChatSendTableViewCell.identifier, for: indexPath) as? ChatSendTableViewCell else { return UITableViewCell() }
+            sendCell.sendView.receiveLabel.text = self.chatContentOrder[indexPath.row]
+            sendCell.sendView.timeLabel.text = self.chatTimeOrder[indexPath.row].toTime
             sendCell.selectionStyle = .none
             return sendCell
         default:
-            return UITableViewCell()
+            guard let receiveCell = tableView.dequeueReusableCell(withIdentifier: ChatReceiveTableViewCell.identifier, for: indexPath) as? ChatReceiveTableViewCell else { return UITableViewCell() }
+            receiveCell.receiveView.receiveLabel.text = self.chatContentOrder[indexPath.row]
+            receiveCell.receiveView.timeLabel.text = self.chatTimeOrder[indexPath.row].toTime
+            receiveCell.selectionStyle = .none
+            return receiveCell
         }
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        switch dummy[indexPath.row] {
+        switch userIdOrder[indexPath.row] {
         case 0:
             return 90
         case 1:
-            return 75
-        case 2:
             return 50
         default:
             return 50

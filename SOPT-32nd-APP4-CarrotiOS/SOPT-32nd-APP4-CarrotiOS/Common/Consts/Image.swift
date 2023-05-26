@@ -50,6 +50,7 @@ public enum Image {
     public static let saleReportIcon = UIImage(named: "sale_ic_report")
     public static let saleSaleProductIcon = UIImage(named: "sale_ic_sale_product")
     public static let saleDiaryImage = UIImage(named: "sale_ic_diary")
+    public static let saleADImage = UIImage(named: "sale_ic_adImage")
     
     // MARK: - Chat
     
@@ -61,6 +62,12 @@ public enum Image {
     public static let chatAddIcon = UIImage(named: "chat_ic_add")
     public static let chatEmojiIcon = UIImage(named: "chat_ic_emoji")
     public static let chatSendIcon = UIImage(named: "chat_ic_send")
+    public static let chatSendIconOrange = UIImage(named: "chat_ic_send_orange")
+    
+    // MARK: - Review
+    
+    public static let reviewSendImage = UIImage(named: "review_send_image")
+    public static let reviewReceiveImage = UIImage(named: "review_receive_image")
     
     // MARK: - temparature
     

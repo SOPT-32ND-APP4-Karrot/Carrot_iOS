@@ -14,6 +14,7 @@
 		057A0AC52A189C8800F10B85 /* SaleSecondSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AC42A189C8800F10B85 /* SaleSecondSectionCell.swift */; };
 		057A0ACB2A1BB15A00F10B85 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */; };
 		057A0ACD2A1BB54600F10B85 /* DealTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0ACC2A1BB54600F10B85 /* DealTipView.swift */; };
+		057A0AD12A1FCA2000F10B85 /* SaleThirdSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A0AD02A1FCA2000F10B85 /* SaleThirdSectionCell.swift */; };
 		C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */; };
 		C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */; };
 		C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */; };
@@ -21,9 +22,15 @@
 		C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D2C2A189EE9003A119E /* UITextField+.swift */; };
 		C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0C2A1FA39100DA32EE /* Config.swift */; };
 		C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */; };
+		C312AB112A1FA58000DA32EE /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB102A1FA58000DA32EE /* Chat.swift */; };
+		C312AB132A1FA7B600DA32EE /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB122A1FA7B600DA32EE /* ChatService.swift */; };
+		C312AB152A1FB64600DA32EE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB142A1FB64600DA32EE /* UIImageView+.swift */; };
+		C312AB172A1FDD8500DA32EE /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312AB162A1FDD8500DA32EE /* String+.swift */; };
 		C32525252A17541A002629E0 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525242A17541A002629E0 /* ReceiveView.swift */; };
 		C32525272A176201002629E0 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32525262A176201002629E0 /* SendView.swift */; };
 		C36D9F9E2A174169006B155F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9F9D2A174169006B155F /* GuideView.swift */; };
+		C3D71D732A208075006222A4 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D71D722A208075006222A4 /* ReviewViewController.swift */; };
+		C3D71D752A208A3B006222A4 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D71D742A208A3B006222A4 /* ReviewView.swift */; };
 		C3FFFB262A13394500FACA8E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB252A13394500FACA8E /* HeaderView.swift */; };
 		C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB292A134E8400FACA8E /* ChatViewController.swift */; };
 		C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */; };
@@ -34,13 +41,10 @@
 		DF1841D52A11BD1C001A466A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1841D32A11BD1C001A466A /* LaunchScreen.storyboard */; };
 		DF1841F82A11C405001A466A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841F72A11C405001A466A /* Color.swift */; };
 		DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1841F92A11C40D001A466A /* UIFont+.swift */; };
-		DF1842022A11C433001A466A /* g.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842012A11C433001A466A /* g.swift */; };
 		DF1842042A11C43A001A466A /* h.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842032A11C43A001A466A /* h.swift */; };
 		DF1842062A11C445001A466A /* i.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842052A11C445001A466A /* i.swift */; };
-		DF1842082A11C44A001A466A /* j.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842072A11C44A001A466A /* j.swift */; };
 		DF18420A2A11C451001A466A /* k.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842092A11C451001A466A /* k.swift */; };
 		DF18420E2A11C45D001A466A /* m.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420D2A11C45D001A466A /* m.swift */; };
-		DF1842102A11C463001A466A /* n.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18420F2A11C463001A466A /* n.swift */; };
 		DF1842122A11C46D001A466A /* o.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1842112A11C46D001A466A /* o.swift */; };
 		DF1842152A11C61A001A466A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DF1842142A11C61A001A466A /* Kingfisher */; };
 		DF1842182A11C66E001A466A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF1842172A11C66E001A466A /* Alamofire */; };
@@ -74,6 +78,7 @@
 		057A0AC42A189C8800F10B85 /* SaleSecondSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleSecondSectionCell.swift; sourceTree = "<group>"; };
 		057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		057A0ACC2A1BB54600F10B85 /* DealTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealTipView.swift; sourceTree = "<group>"; };
+		057A0AD02A1FCA2000F10B85 /* SaleThirdSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleThirdSectionCell.swift; sourceTree = "<group>"; };
 		C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGuideTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSendTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,9 +86,15 @@
 		C30F6D2C2A189EE9003A119E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		C312AB0C2A1FA39100DA32EE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		C312AB0E2A1FA3C100DA32EE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		C312AB102A1FA58000DA32EE /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		C312AB122A1FA7B600DA32EE /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		C312AB142A1FB64600DA32EE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		C312AB162A1FDD8500DA32EE /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		C32525242A17541A002629E0 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		C32525262A176201002629E0 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		C36D9F9D2A174169006B155F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		C3D71D722A208075006222A4 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		C3D71D742A208A3B006222A4 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		C3FFFB252A13394500FACA8E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C3FFFB292A134E8400FACA8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeader.swift; sourceTree = "<group>"; };
@@ -96,13 +107,10 @@
 		DF1841D62A11BD1C001A466A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF1841F72A11C405001A466A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DF1841F92A11C40D001A466A /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
-		DF1842012A11C433001A466A /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
 		DF1842032A11C43A001A466A /* h.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h.swift; sourceTree = "<group>"; };
 		DF1842052A11C445001A466A /* i.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i.swift; sourceTree = "<group>"; };
-		DF1842072A11C44A001A466A /* j.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = j.swift; sourceTree = "<group>"; };
 		DF1842092A11C451001A466A /* k.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = k.swift; sourceTree = "<group>"; };
 		DF18420D2A11C45D001A466A /* m.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m.swift; sourceTree = "<group>"; };
-		DF18420F2A11C463001A466A /* n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n.swift; sourceTree = "<group>"; };
 		DF1842112A11C46D001A466A /* o.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = o.swift; sourceTree = "<group>"; };
 		DF18421F2A11CAAB001A466A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		DF1842212A11F5A1001A466A /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 				0559707B2A17FC5F00868C42 /* SaleFirstSectionCell.swift */,
 				057A0AC42A189C8800F10B85 /* SaleSecondSectionCell.swift */,
 				057A0ACC2A1BB54600F10B85 /* DealTipView.swift */,
+				057A0AD02A1FCA2000F10B85 /* SaleThirdSectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +166,36 @@
 				055970752A17FBCD00868C42 /* SaleViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C3D71D6F2A207DA5006222A4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */,
+				C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */,
+				C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C3D71D702A207DAC006222A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFFB292A134E8400FACA8E /* ChatViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C3D71D712A207DB3006222A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */,
+				C36D9F9D2A174169006B155F /* GuideView.swift */,
+				C32525242A17541A002629E0 /* ReceiveView.swift */,
+				C32525262A176201002629E0 /* SendView.swift */,
+				C30F6D2A2A189BB5003A119E /* ChatInputView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C3FFFB242A13393400FACA8E /* Header */ = {
@@ -303,6 +342,8 @@
 				057A0ACA2A1BB15A00F10B85 /* UIButton+.swift */,
 				DF47025B2A1F70EE00A71214 /* UITableView+.swift */,
 				DF47025D2A1F713300A71214 /* NSObject+.swift */,
+				C312AB142A1FB64600DA32EE /* UIImageView+.swift */,
+				C312AB162A1FDD8500DA32EE /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,7 +351,8 @@
 		DF1841E62A11C28F001A466A /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				DF1842012A11C433001A466A /* g.swift */,
+				C3D71D722A208075006222A4 /* ReviewViewController.swift */,
+				C3D71D742A208A3B006222A4 /* ReviewView.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -318,15 +360,9 @@
 		DF1841E72A11C294001A466A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				C3FFFB292A134E8400FACA8E /* ChatViewController.swift */,
-				C30F6D182A176EB8003A119E /* ChatGuideTableViewCell.swift */,
-				C30F6D1A2A176EC3003A119E /* ChatReceiveTableViewCell.swift */,
-				C30F6D1C2A176ECD003A119E /* ChatSendTableViewCell.swift */,
-				C3FFFB2B2A134E9400FACA8E /* ChatHeader.swift */,
-				C36D9F9D2A174169006B155F /* GuideView.swift */,
-				C32525242A17541A002629E0 /* ReceiveView.swift */,
-				C32525262A176201002629E0 /* SendView.swift */,
-				C30F6D2A2A189BB5003A119E /* ChatInputView.swift */,
+				C3D71D702A207DAC006222A4 /* ViewController */,
+				C3D71D6F2A207DA5006222A4 /* Cell */,
+				C3D71D712A207DB3006222A4 /* View */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -371,7 +407,7 @@
 		DF1841ED2A11C2B3001A466A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				DF1842072A11C44A001A466A /* j.swift */,
+				C312AB122A1FA7B600DA32EE /* ChatService.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -403,7 +439,7 @@
 		DF1841F22A11C2D1001A466A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				DF18420F2A11C463001A466A /* n.swift */,
+				C312AB102A1FA58000DA32EE /* Chat.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -514,7 +550,6 @@
 				C312AB0F2A1FA3C100DA32EE /* NetworkResult.swift in Sources */,
 				C30F6D192A176EB8003A119E /* ChatGuideTableViewCell.swift in Sources */,
 				0559707A2A17FBE400868C42 /* SaleHeaderView.swift in Sources */,
-				DF1842082A11C44A001A466A /* j.swift in Sources */,
 				DF18423C2A1795BE001A466A /* UIStackView+.swift in Sources */,
 				C30F6D1D2A176ECD003A119E /* ChatSendTableViewCell.swift in Sources */,
 				C30F6D1B2A176EC3003A119E /* ChatReceiveTableViewCell.swift in Sources */,
@@ -526,30 +561,36 @@
 				DF47025C2A1F70EE00A71214 /* UITableView+.swift in Sources */,
 				C30F6D2D2A189EEA003A119E /* UITextField+.swift in Sources */,
 				C3FFFB2C2A134E9400FACA8E /* ChatHeader.swift in Sources */,
+				C312AB152A1FB64600DA32EE /* UIImageView+.swift in Sources */,
 				DF1842342A120CB0001A466A /* BaseViewController.swift in Sources */,
 				055970762A17FBCD00868C42 /* SaleViewController.swift in Sources */,
 				DF1842062A11C445001A466A /* i.swift in Sources */,
 				DF1841CB2A11BD1A001A466A /* SceneDelegate.swift in Sources */,
+				C312AB112A1FA58000DA32EE /* Chat.swift in Sources */,
 				DF1842362A1268F6001A466A /* UIViewController+.swift in Sources */,
 				C312AB0D2A1FA39100DA32EE /* Config.swift in Sources */,
 				0559707C2A17FC5F00868C42 /* SaleFirstSectionCell.swift in Sources */,
+				C312AB132A1FA7B600DA32EE /* ChatService.swift in Sources */,
 				DF1842382A127550001A466A /* BaseView.swift in Sources */,
 				DF18423A2A178028001A466A /* HomeNavigationView.swift in Sources */,
+				057A0AD12A1FCA2000F10B85 /* SaleThirdSectionCell.swift in Sources */,
+				DF18423A2A178028001A466A /* HomeHeaderView.swift in Sources */,
 				055970792A17FBE400868C42 /* SaleDummyTableViewCell.swift in Sources */,
 				C3FFFB2A2A134E8400FACA8E /* ChatViewController.swift in Sources */,
+				C3D71D732A208075006222A4 /* ReviewViewController.swift in Sources */,
 				DF1841FA2A11C40D001A466A /* UIFont+.swift in Sources */,
 				DF1841F82A11C405001A466A /* Color.swift in Sources */,
 				DF47025E2A1F713300A71214 /* NSObject+.swift in Sources */,
 				DF1842122A11C46D001A466A /* o.swift in Sources */,
 				DF1842302A120B55001A466A /* Int+.swift in Sources */,
 				DF4702522A189FC000A71214 /* HomeDataModel.swift in Sources */,
+				C3D71D752A208A3B006222A4 /* ReviewView.swift in Sources */,
 				057A0ACB2A1BB15A00F10B85 /* UIButton+.swift in Sources */,
 				C36D9F9E2A174169006B155F /* GuideView.swift in Sources */,
 				DF1842222A11F5A1001A466A /* Image.swift in Sources */,
-				DF1842022A11C433001A466A /* g.swift in Sources */,
 				C3FFFB2E2A135E4A00FACA8E /* UILabel+.swift in Sources */,
 				DF1842042A11C43A001A466A /* h.swift in Sources */,
-				DF1842102A11C463001A466A /* n.swift in Sources */,
+				C312AB172A1FDD8500DA32EE /* String+.swift in Sources */,
 				C30F6D2B2A189BB5003A119E /* ChatInputView.swift in Sources */,
 				057A0AC52A189C8800F10B85 /* SaleSecondSectionCell.swift in Sources */,
 				DF18420A2A11C451001A466A /* k.swift in Sources */,
