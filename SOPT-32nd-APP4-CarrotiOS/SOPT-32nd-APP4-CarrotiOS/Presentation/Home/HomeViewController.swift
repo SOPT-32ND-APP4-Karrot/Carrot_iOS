@@ -12,6 +12,8 @@ import Then
 
 final class HomeViewController: UIViewController {
     
+    private var salesArray: [Datum] = []
+    
     private let homeNavigationView = HomeNavigationView()
     
     private let homeTableView = UITableView()
@@ -20,9 +22,25 @@ final class HomeViewController: UIViewController {
         
         super.viewDidLoad()
         
+        loadSales()
         setUI()
         setLayout()
         setDelegate()
+    }
+    
+    private func loadSales() {
+        
+        HomeService.get.loadSales() { response in
+            switch response {
+            case .success(let data):
+                dump(data)
+                guard let data = data as? HomeDataModel else { return }
+                self.salesArray = data.data
+                self.homeTableView.reloadData()
+            default:
+                return
+            }
+        }
     }
 }
 
@@ -67,12 +85,14 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return self.salesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = homeTableView.dequeueCell(type: HomeTableViewCell.self, indexPath: indexPath)
+        
+        cell.salesDataBind(datum: self.salesArray[indexPath.row])
         
         return cell
     }

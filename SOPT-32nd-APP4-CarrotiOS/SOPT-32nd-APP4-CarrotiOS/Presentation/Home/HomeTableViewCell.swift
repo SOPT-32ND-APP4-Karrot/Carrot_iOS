@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
+import Kingfisher
+
 final class HomeTableViewCell: UITableViewCell {
     
     static let identifier = "HomeTableViewCell"
@@ -17,7 +19,6 @@ final class HomeTableViewCell: UITableViewCell {
     private lazy var productImage = UIImageView()
     private let productLabel = UILabel()
     private let placeLabel = UILabel()
-    private let uploadLabel = UILabel()
     private let timeLabel = UILabel()
     private let priceLabel = UILabel()
     private let priceDownImage = UIImageView()
@@ -36,6 +37,39 @@ final class HomeTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func salesDataBind(datum: Datum) {
+        
+        productImage.kfSetImage(url: datum.saleImgURL)
+        
+        productLabel.text = datum.title
+        placeLabel.text = datum.location + " · "
+        
+        if datum.isUpdated {
+            placeLabel.text = datum.location + " · 끌올 "
+        }
+        
+        timeLabel.text = datum.time
+        
+        if datum.saleID == 1 {
+            placeLabel.text = "당근마켓 x 맹그로브 · "
+            timeLabel.text = "순간이동"
+        }
+        
+        priceLabel.text = datum.price.priceText
+        
+        if datum.isDiscount {
+            priceDownImage.isHidden = false
+        }
+        
+        if datum.likeCount > 0 {
+            heartImage.isHidden = false
+            heartCountLabel.isHidden = false
+            
+            if datum.isCheckLike {
+                heartImage.image = Image.filledHeartIcon
+            }
+        }
+    }
 }
 
 extension HomeTableViewCell {
@@ -51,6 +85,7 @@ extension HomeTableViewCell {
             $0.font = .body2
             $0.addLineHeight(lineHeight: 22)
             $0.text = "이거 왜 이런 거임? 진짜 모름.."
+            $0.numberOfLines = 0
         }
         
         placeLabel.do {
@@ -76,25 +111,25 @@ extension HomeTableViewCell {
         
         priceDownImage.do {
             $0.image = Image.homeDownDownIcon
-//            $0.isHidden = true
+            $0.isHidden = true
         }
         
         heartImage.do {
             $0.image = Image.emptyHeartIcon
-//            $0.isHidden = true
+            $0.isHidden = true
         }
         
         heartCountLabel.do {
             $0.font = .body4
             $0.addLineHeight(lineHeight: 21)
-//            $0.isHidden = true
+            $0.isHidden = true
             $0.text = "7"
         }
     }
     
     private func setLayout() {
         
-        contentView.addSubviews(productImage, productLabel, placeLabel, uploadLabel, timeLabel, priceLabel, priceDownImage, heartImage, heartCountLabel)
+        contentView.addSubviews(productImage, productLabel, placeLabel, timeLabel, priceLabel, priceDownImage, heartImage, heartCountLabel)
         
         productImage.snp.makeConstraints {
             $0.size.equalTo(108)
