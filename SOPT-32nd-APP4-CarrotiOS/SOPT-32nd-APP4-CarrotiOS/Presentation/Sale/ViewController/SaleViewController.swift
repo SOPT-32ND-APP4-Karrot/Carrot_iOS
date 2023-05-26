@@ -12,6 +12,8 @@ import Then
 
 class SaleViewController: BaseViewController {
     
+    let saleFooterView = SaleFooterView()
+
     private let saleTableView = UITableView(frame: .zero, style: .plain).then {
         $0.contentInsetAdjustmentBehavior = .never
     }
@@ -36,8 +38,10 @@ class SaleViewController: BaseViewController {
         self.saleTableView.dataSource = self
         
         let headerView = SaleHeaderView()
+
         
         self.saleTableView.tableHeaderView = headerView
+//        self.saleTableView.tableFooterView = saleFooterView
         self.saleTableView.register(SaleDummyTableViewCell.self,
                                     forCellReuseIdentifier: SaleDummyTableViewCell.identifier)
         self.saleTableView.register(SaleFirstSectionCell.self,
@@ -54,6 +58,9 @@ class SaleViewController: BaseViewController {
         self.saleTableView.tableHeaderView?.frame = .init(origin: .zero,
                                                           size: .init(width: UIScreen.main.bounds.width,
                                                                       height: 383))
+//        self.saleTableView.tableFooterView?.frame = .init(origin: .zero,
+//                                                          size: .init(width: UIScreen.main.bounds.width,
+//                                                                      height: 106))
         self.saleTableView.rowHeight = UITableView.automaticDimension
         self.saleTableView.estimatedRowHeight = 300
     }
@@ -117,5 +124,20 @@ extension SaleViewController: UITableViewDataSource {
             return 600
         }
         return 81
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section == 4 {
+            saleFooterView.backgroundColor = .white
+            return saleFooterView
+        }
+        return nil
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section != 4 {
+            return 0
+        }
+        return 106
     }
 }

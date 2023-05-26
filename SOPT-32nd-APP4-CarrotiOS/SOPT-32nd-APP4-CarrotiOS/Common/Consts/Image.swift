@@ -52,6 +52,7 @@ public enum Image {
     public static let saleDiaryImage = UIImage(named: "sale_ic_diary")
     public static let saleADImage = UIImage(named: "sale_ic_adImage")
     public static let saleSalerProductImage = UIImage(named: "sale_ic_saler_product")
+    public static let salePayImage = UIImage(named: "sale_ic_pay")
     
     // MARK: - Chat
     
